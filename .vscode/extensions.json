@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "redhat.vscode-yaml",
+    "biomejs.biome",
+    "unifiedjs.vscode-remark",
+    "editorconfig.editorconfig"
+  ]
+}

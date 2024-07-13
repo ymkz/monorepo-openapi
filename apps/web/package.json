@@ -1,0 +1,33 @@
+{
+  "name": "@monorepo-openapi/web",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "sideEffects": false,
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "dev": "remix vite:dev --port 3000",
+    "build": "remix vite:build",
+    "start": "remix-serve ./build/server/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remix-run/node": "2.10.2",
+    "@remix-run/react": "2.10.2",
+    "@remix-run/serve": "2.10.2",
+    "isbot": "5.1.12",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "2.10.2",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.39",
+    "tailwindcss": "3.4.4",
+    "vite": "5.3.3"
+  }
+}

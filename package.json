@@ -1,0 +1,22 @@
+{
+  "name": "monorepo-openapi",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@9.5.0",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "lint": "biome check",
+    "lint:fix": "biome check --write",
+    "update": "pnpm update --latest --recursive --interactive"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "turbo": "2.0.6",
+    "typescript": "5.5.3"
+  }
+}
