@@ -10,13 +10,16 @@
     "dev": "turbo run dev",
     "build": "turbo run build",
     "typecheck": "turbo run typecheck",
+    "generate": "turbo run generate",
     "lint": "biome check",
     "lint:fix": "biome check --write",
     "update": "pnpm update --latest --recursive --interactive"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
+    "@types/node": "20.14.10",
     "turbo": "2.0.6",
-    "typescript": "5.5.3"
+    "typescript": "5.5.3",
+    "vitest": "2.0.2"
   }
 }

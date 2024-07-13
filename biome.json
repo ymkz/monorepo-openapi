@@ -8,6 +8,12 @@
   "formatter": {
     "lineWidth": 120
   },
+  "linter": {
+    "ignore": ["generated"]
+  },
+  "organizeImports": {
+    "ignore": ["generated"]
+  },
   "javascript": {
     "formatter": {
       "quoteStyle": "single",

@@ -1,0 +1,19 @@
+{
+  "name": "@monorepo-openapi/spec",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "dev": "concurrently npm:dev:*",
+    "dev:mock": "scalar mock openapi.yaml -w -p 3001",
+    "dev:serve": "scalar serve openapi.yaml -w -p 3002",
+    "lint": "scalar validate openapi.yaml"
+  },
+  "devDependencies": {
+    "@scalar/cli": "0.2.149",
+    "concurrently": "8.2.2"
+  }
+}

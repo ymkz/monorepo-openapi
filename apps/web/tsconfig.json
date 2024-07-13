@@ -16,7 +16,6 @@
     "moduleResolution": "Bundler",
     "noEmit": true,
     "strict": true,
-    "allowJs": true,
     "skipLibCheck": true,
     "isolatedModules": true,
     "esModuleInterop": true,
