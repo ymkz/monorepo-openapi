@@ -1,20 +1,40 @@
 services:
-  db:
-    container_name: db
+  mysql:
+    container_name: mysql
     image: mysql:9
     restart: always
     ports:
       - 3306:3306
     volumes:
-      - ./db/init:/docker-entrypoint-initdb.d
-      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./mysql/init:/docker-entrypoint-initdb.d
+      - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: local_db
       MYSQL_USER: local_user
       MYSQL_PASSWORD: local_pass
     healthcheck:
-      test: mysqladmin ping -uroot -proot
+      test: mysqladmin ping -u$${MYSQL_USER} -p$${MYSQL_PASSWORD}
       timeout: 5s
       interval: 5s
       retries: 10
+      start_period: 5s
+  # postgres:
+  #   container_name: postgres
+  #   image: postgres:17beta2
+  #   restart: always
+  #   ports:
+  #     - 5432:5432
+  #   volumes:
+  #     - ./postgres/init:/docker-entrypoint-initdb.d
+  #   environment:
+  #     POSTGRES_DB: local_db
+  #     POSTGRES_USER: local_user
+  #     POSTGRES_PASSWORD: local_pass
+    # # なぜかこれだとhealthcheckに失敗する
+    # healthcheck:
+    #   test: pg_isready -U $${POSTGRES_USER} || exit 1
+    #   interval: 5s
+    #   timeout: 5s
+    #   retries: 10
+    #   start_period: 5s

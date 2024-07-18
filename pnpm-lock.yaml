@@ -20,9 +20,6 @@ importers:
       typescript:
         specifier: 5.5.3
         version: 5.5.3
-      vitest:
-        specifier: 2.0.2
-        version: 2.0.2(@types/node@20.14.10)
 
   apps/spec:
     devDependencies:
@@ -7183,21 +7180,25 @@ snapshots:
       '@vitest/utils': 2.0.2
       chai: 5.1.1
       tinyrainbow: 1.2.0
+    optional: true
 
   '@vitest/pretty-format@2.0.2':
     dependencies:
       tinyrainbow: 1.2.0
+    optional: true
 
   '@vitest/runner@2.0.2':
     dependencies:
       '@vitest/utils': 2.0.2
       pathe: 1.1.2
+    optional: true
 
   '@vitest/snapshot@2.0.2':
     dependencies:
       '@vitest/pretty-format': 2.0.2
       magic-string: 0.30.10
       pathe: 1.1.2
+    optional: true
 
   '@vitest/spy@1.6.0':
     dependencies:
@@ -7206,6 +7207,7 @@ snapshots:
   '@vitest/spy@2.0.2':
     dependencies:
       tinyspy: 3.0.0
+    optional: true
 
   '@vitest/utils@1.6.0':
     dependencies:
@@ -7220,6 +7222,7 @@ snapshots:
       estree-walker: 3.0.3
       loupe: 3.1.1
       tinyrainbow: 1.2.0
+    optional: true
 
   '@vue/compiler-core@3.4.31':
     dependencies:
@@ -7385,7 +7388,8 @@ snapshots:
 
   assertion-error@1.1.0: {}
 
-  assertion-error@2.0.1: {}
+  assertion-error@2.0.1:
+    optional: true
 
   ast-types@0.16.1:
     dependencies:
@@ -7582,6 +7586,7 @@ snapshots:
       deep-eql: 5.0.2
       loupe: 3.1.1
       pathval: 2.0.0
+    optional: true
 
   chalk@2.4.2:
     dependencies:
@@ -7611,7 +7616,8 @@ snapshots:
     dependencies:
       get-func-name: 2.0.2
 
-  check-error@2.1.1: {}
+  check-error@2.1.1:
+    optional: true
 
   chokidar@3.6.0:
     dependencies:
@@ -7805,7 +7811,8 @@ snapshots:
     dependencies:
       type-detect: 4.0.8
 
-  deep-eql@5.0.2: {}
+  deep-eql@5.0.2:
+    optional: true
 
   deep-object-diff@1.1.9: {}
 
@@ -8732,6 +8739,7 @@ snapshots:
   loupe@3.1.1:
     dependencies:
       get-func-name: 2.0.2
+    optional: true
 
   lowlight@3.1.0:
     dependencies:
@@ -9685,7 +9693,8 @@ snapshots:
 
   pathval@1.1.1: {}
 
-  pathval@2.0.0: {}
+  pathval@2.0.0:
+    optional: true
 
   peek-stream@1.1.3:
     dependencies:
@@ -10259,7 +10268,8 @@ snapshots:
       get-intrinsic: 1.2.4
       object-inspect: 1.13.2
 
-  siginfo@2.0.0: {}
+  siginfo@2.0.0:
+    optional: true
 
   signal-exit@3.0.7: {}
 
@@ -10302,11 +10312,13 @@ snapshots:
     dependencies:
       minipass: 7.1.2
 
-  stackback@0.0.2: {}
+  stackback@0.0.2:
+    optional: true
 
   statuses@2.0.1: {}
 
-  std-env@3.7.0: {}
+  std-env@3.7.0:
+    optional: true
 
   storybook@8.2.2(@babel/preset-env@7.24.8(@babel/core@7.24.8)):
     dependencies:
@@ -10518,15 +10530,19 @@ snapshots:
 
   tiny-invariant@1.3.3: {}
 
-  tinybench@2.8.0: {}
+  tinybench@2.8.0:
+    optional: true
 
-  tinypool@1.0.0: {}
+  tinypool@1.0.0:
+    optional: true
 
-  tinyrainbow@1.2.0: {}
+  tinyrainbow@1.2.0:
+    optional: true
 
   tinyspy@2.2.1: {}
 
-  tinyspy@3.0.0: {}
+  tinyspy@3.0.0:
+    optional: true
 
   tippy.js@6.3.7:
     dependencies:
@@ -10826,6 +10842,7 @@ snapshots:
       - sugarss
       - supports-color
       - terser
+    optional: true
 
   vite@5.3.3(@types/node@20.14.10):
     dependencies:
@@ -10867,6 +10884,7 @@ snapshots:
       - sugarss
       - supports-color
       - terser
+    optional: true
 
   vue-demi@0.14.8(vue@3.4.31(typescript@5.5.3)):
     dependencies:
@@ -10929,6 +10947,7 @@ snapshots:
     dependencies:
       siginfo: 2.0.0
       stackback: 0.0.2
+    optional: true
 
   wordwrap@1.0.0: {}
 
