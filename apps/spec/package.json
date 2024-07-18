@@ -13,7 +13,6 @@
     "lint": "scalar validate openapi.yaml"
   },
   "devDependencies": {
-    "@scalar/cli": "0.2.154",
-    "concurrently": "8.2.2"
+    "@scalar/cli": "0.2.154"
   }
 }
