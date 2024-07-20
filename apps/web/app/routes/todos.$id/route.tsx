@@ -11,7 +11,7 @@ export const loader = async (args: LoaderFunctionArgs) => {
 	const { id } = args.params
 	if (!id) throw new Error('not found params id')
 
-	const result = await getTodo({ client: todosApiClient, path: { id } })
+	const result = await getTodo({ client: todosApiClient, path: { id: Number(id) } })
 	// TODO: エラー処理
 
 	return { todo: result.data }

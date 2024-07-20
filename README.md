@@ -5,6 +5,6 @@ OpenAPIでbackendとfrontendをいい感じに管理するお試し実装のリ�
 
 ## Apps
 
-* [api](app/api)
-* [spec](app/spec)
-* [web](app/web)
+* [api](apps/api)
+* [spec](apps/spec)
+* [web](apps/web)
