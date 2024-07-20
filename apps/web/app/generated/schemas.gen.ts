@@ -36,9 +36,7 @@ export const $Todo = {
 	required: ['id', 'title', 'createdAt'],
 	properties: {
 		id: {
-			type: 'string',
-			description: '連番で発番されるid',
-			example: 1,
+			$ref: '#/components/schemas/TodoId',
 		},
 		title: {
 			type: 'string',
@@ -70,4 +68,11 @@ export const $Todo = {
 			example: '2024-01-23T01:23:45+09:00',
 		},
 	},
+} as const
+
+export const $TodoId = {
+	type: 'integer',
+	format: 'int32',
+	description: '連番で発番されるid',
+	example: 1,
 } as const

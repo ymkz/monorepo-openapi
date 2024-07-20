@@ -23,10 +23,7 @@ export type ProblemDetails = {
 }
 
 export type Todo = {
-	/**
-	 * 連番で発番されるid
-	 */
-	id: string
+	id: TodoId
 	/**
 	 * タイトル
 	 */
@@ -48,6 +45,11 @@ export type Todo = {
 	 */
 	deletedAt?: string
 }
+
+/**
+ * 連番で発番されるid
+ */
+export type TodoId = number
 
 export type FindTodosData = {
 	query?: {
@@ -80,7 +82,7 @@ export type UpdateTodoData = {
 		title: string
 	}
 	path: {
-		id: string
+		id: TodoId
 	}
 }
 
@@ -90,7 +92,7 @@ export type UpdateTodoError = ProblemDetails
 
 export type GetTodoData = {
 	path: {
-		id: string
+		id: TodoId
 	}
 }
 
@@ -100,7 +102,7 @@ export type GetTodoError = ProblemDetails
 
 export type DeleteTodoData = {
 	path: {
-		id: string
+		id: TodoId
 	}
 }
 
@@ -110,7 +112,7 @@ export type DeleteTodoError = ProblemDetails
 
 export type CompleteTodoData = {
 	path: {
-		id: string
+		id: TodoId
 	}
 }
 
@@ -213,7 +215,7 @@ export type $OpenApiTs = {
 		}
 	}
 	'/todos/{id}/complete': {
-		post: {
+		put: {
 			req: CompleteTodoData
 			res: {
 				/**

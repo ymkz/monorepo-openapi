@@ -82,7 +82,7 @@ export const deleteTodo = (options: Options<DeleteTodoData>) => {
  * 指定したidのTodoを完了にする
  */
 export const completeTodo = (options: Options<CompleteTodoData>) => {
-	return (options?.client ?? client).post<CompleteTodoResponse, CompleteTodoError>({
+	return (options?.client ?? client).put<CompleteTodoResponse, CompleteTodoError>({
 		...options,
 		url: '/todos/{id}/complete',
 	})

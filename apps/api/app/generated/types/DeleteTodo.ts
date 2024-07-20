@@ -1,10 +1,8 @@
+import { TodoId } from './TodoId'
 import type { ProblemDetails } from './ProblemDetails'
 
 export type DeleteTodoPathParams = {
-	/**
-	 * @type string
-	 */
-	id: string
+	id: TodoId
 }
 /**
  * @description 正常時の応答

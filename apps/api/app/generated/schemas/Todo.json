@@ -1,7 +1,13 @@
 {
   "type": "object",
   "properties": {
-    "id": { "description": "連番で発番されるid", "type": "string", "example": 1 },
+    "id": {
+      "description": "連番で発番されるid",
+      "type": "integer",
+      "format": "int32",
+      "example": 1,
+      "x-readme-ref-name": "TodoId"
+    },
     "title": { "description": "タイトル", "type": "string", "example": "TODOタイトル" },
     "completedAt": {
       "description": "完了時刻（ISO8601）（最後に完了にした時刻が入る）",

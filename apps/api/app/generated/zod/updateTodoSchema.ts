@@ -1,8 +1,9 @@
 import { z } from 'zod'
+import { todoIdSchema } from './todoIdSchema'
 import { todoSchema } from './todoSchema'
 import { problemDetailsSchema } from './problemDetailsSchema'
 
-export const updateTodoPathParamsSchema = z.object({ id: z.coerce.string() })
+export const updateTodoPathParamsSchema = z.object({ id: z.lazy(() => todoIdSchema) })
 /**
  * @description 正常時の応答
  */

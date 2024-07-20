@@ -1,11 +1,5 @@
-import { Hono } from 'hono'
+import { factory } from '../factory'
 
-const app = new Hono()
-
-export const healthcheckRoute = app
-	.get('', (ctx) => {
-		return ctx.text('UP', 200)
-	})
-	.get('health', (ctx) => {
-		return ctx.text('UP', 200)
-	})
+export const healthcheckHandlers = factory.createHandlers((ctx) => {
+	return ctx.text('UP', 200)
+})

@@ -105,7 +105,7 @@ paths:
           in: path
           required: true
           schema:
-            type: string
+            $ref: "#/components/schemas/TodoId"
       requestBody:
         required: true
         content:
@@ -156,7 +156,7 @@ paths:
           in: path
           required: true
           schema:
-            type: string
+            $ref: "#/components/schemas/TodoId"
       responses:
         "200":
           description: 正常時の応答
@@ -188,7 +188,7 @@ paths:
           in: path
           required: true
           schema:
-            type: string
+            $ref: "#/components/schemas/TodoId"
       responses:
         "200":
           description: 正常時の応答
@@ -205,7 +205,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/ProblemDetails"
   /todos/{id}/complete:
-    post:
+    put:
       operationId: completeTodo
       summary: completeTodo
       description: |-
@@ -217,7 +217,7 @@ paths:
           in: path
           required: true
           schema:
-            type: string
+            $ref: "#/components/schemas/TodoId"
       responses:
         "200":
           description: 正常時の応答
@@ -276,9 +276,7 @@ components:
         - createdAt
       properties:
         id:
-          type: string
-          description: 連番で発番されるid
-          example: 1
+          $ref: "#/components/schemas/TodoId"
         title:
           type: string
           description: タイトル
@@ -303,3 +301,8 @@ components:
           format: date-time
           description: 削除時刻（ISO8601）（論理削除されたら削除時刻が入る）
           example: 2024-01-23T01:23:45+09:00
+    TodoId:
+      type: integer
+      format: int32
+      description: 連番で発番されるid
+      example: 1

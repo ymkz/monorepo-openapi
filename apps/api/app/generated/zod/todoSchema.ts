@@ -1,8 +1,9 @@
+import { todoIdSchema } from './todoIdSchema'
 import { z } from 'zod'
 import type { Todo } from '../types/Todo'
 
 export const todoSchema = z.object({
-	id: z.coerce.string().describe('\u9023\u756A\u3067\u767A\u756A\u3055\u308C\u308Bid'),
+	id: z.lazy(() => todoIdSchema),
 	title: z.coerce.string().describe('\u30BF\u30A4\u30C8\u30EB'),
 	completedAt: z
 		.string()

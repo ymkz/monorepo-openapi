@@ -1,9 +1,7 @@
+import { TodoId } from './TodoId'
+
 export type Todo = {
-	/**
-	 * @description 連番で発番されるid
-	 * @type string
-	 */
-	id: string
+	id: TodoId
 	/**
 	 * @description タイトル
 	 * @type string

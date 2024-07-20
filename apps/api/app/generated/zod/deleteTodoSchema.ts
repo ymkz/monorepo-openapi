@@ -1,7 +1,8 @@
 import { z } from 'zod'
+import { todoIdSchema } from './todoIdSchema'
 import { problemDetailsSchema } from './problemDetailsSchema'
 
-export const deleteTodoPathParamsSchema = z.object({ id: z.coerce.string() })
+export const deleteTodoPathParamsSchema = z.object({ id: z.lazy(() => todoIdSchema) })
 /**
  * @description 正常時の応答
  */

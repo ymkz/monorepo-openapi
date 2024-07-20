@@ -1,11 +1,9 @@
+import { TodoId } from './TodoId'
 import type { ProblemDetails } from './ProblemDetails'
 import type { Todo } from './Todo'
 
 export type UpdateTodoPathParams = {
-	/**
-	 * @type string
-	 */
-	id: string
+	id: TodoId
 }
 /**
  * @description 正常時の応答

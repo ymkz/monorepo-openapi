@@ -160,6 +160,6 @@ export const paths = {
 		delete: operations['deleteTodo'],
 	},
 	'/todos/{id}/complete': {
-		post: operations['completeTodo'],
+		put: operations['completeTodo'],
 	},
 } as const

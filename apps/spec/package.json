@@ -10,7 +10,7 @@
     "dev": "concurrently npm:dev:*",
     "dev:mock": "scalar mock openapi.yaml -w -p 3001",
     "dev:serve": "scalar serve openapi.yaml -w -p 3002",
-    "lint": "scalar validate openapi.yaml"
+    "build": "scalar validate openapi.yaml"
   },
   "devDependencies": {
     "@scalar/cli": "0.2.155"

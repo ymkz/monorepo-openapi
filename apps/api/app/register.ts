@@ -1,13 +1,18 @@
-import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 import { secureHeaders } from 'hono/secure-headers'
+import { factory } from './factory'
 import { accessLogger } from './middleware/access-logger'
 import { contextRun } from './middleware/async-context'
 import { requestId } from './middleware/request-id'
-import { healthcheckRoute } from './presenter/healthcheck'
-import { todosRoute } from './presenter/todos'
+import { completeTodoHandlers } from './presenter/completeTodo'
+import { createTodoHandlers } from './presenter/createTodo'
+import { deleteTodoHandlers } from './presenter/deleteTodo'
+import { findTodosHandlers } from './presenter/findTodos'
+import { getTodoHandlers } from './presenter/getTodo'
+import { healthcheckHandlers } from './presenter/healthcheck'
+import { updateTodoHandlers } from './presenter/updateTodo'
 
-const app = new Hono()
+const app = factory.createApp()
 
 app.use(contextRun())
 app.use(requestId())
@@ -15,7 +20,13 @@ app.use(accessLogger())
 app.use(secureHeaders())
 app.use(cors({ origin: ['http://localhost:3000', 'http://localhost:3002'] }))
 
-app.route('/', healthcheckRoute)
-app.route('/todos', todosRoute)
+app.get('/', ...healthcheckHandlers)
+app.get('/healthz', ...healthcheckHandlers)
+app.get('/todos', ...findTodosHandlers)
+app.post('/todos', ...createTodoHandlers)
+app.get('/todos/:id', ...getTodoHandlers)
+app.put('/todos/:id', ...updateTodoHandlers)
+app.delete('/todos/:id', ...deleteTodoHandlers)
+app.put('/todos/:id/complete', ...completeTodoHandlers)
 
 export { app }
