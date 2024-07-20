@@ -31,7 +31,7 @@
     "@kubb/swagger": "2.23.2",
     "@kubb/swagger-ts": "2.23.2",
     "@kubb/swagger-zod": "2.23.2",
-    "pkgroll": "2.1.1",
+    "pkgroll": "2.4.1",
     "tsx": "4.16.2"
   }
 }
