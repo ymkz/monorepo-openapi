@@ -1,4 +1,4 @@
-import { createMiddleware } from 'hono/factory'
+import { factory } from '../factory'
 import { logger } from '../helper/logger'
 
 const duration = (start: number) => {
@@ -9,7 +9,7 @@ const duration = (start: number) => {
 const IGNORE_PATH = /^\/(favicon|health)/
 
 export const accessLogger = () => {
-	return createMiddleware(async (ctx, next) => {
+	return factory.createMiddleware(async (ctx, next) => {
 		if (IGNORE_PATH.test(ctx.req.path)) return await next()
 
 		const start = performance.now()

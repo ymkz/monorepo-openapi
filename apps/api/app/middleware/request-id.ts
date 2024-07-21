@@ -1,5 +1,5 @@
 import { getRandomValues } from 'node:crypto'
-import { createMiddleware } from 'hono/factory'
+import { factory } from '../factory'
 import { context } from '../helper/context'
 
 const randomId = () => {
@@ -8,7 +8,7 @@ const randomId = () => {
 }
 
 export const requestId = () => {
-	return createMiddleware(async (ctx, next) => {
+	return factory.createMiddleware(async (ctx, next) => {
 		const header = ctx.req.header()
 		const reqId = header['X-Request-Id'] ?? randomId()
 		context.getStore()?.set('reqId', reqId)
