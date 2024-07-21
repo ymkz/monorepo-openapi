@@ -14,27 +14,28 @@ services:
       MYSQL_USER: local_user
       MYSQL_PASSWORD: local_pass
     healthcheck:
-      test: mysqladmin ping -u$${MYSQL_USER} -p$${MYSQL_PASSWORD}
+      test: ["CMD-SHELL", "mysqladmin ping -u$${MYSQL_USER} -p$${MYSQL_PASSWORD}"]
       timeout: 5s
       interval: 5s
-      retries: 10
+      retries: 5
       start_period: 5s
-  # postgres:
-  #   container_name: postgres
-  #   image: postgres:17beta2
-  #   restart: always
-  #   ports:
-  #     - 5432:5432
-  #   volumes:
-  #     - ./postgres/init:/docker-entrypoint-initdb.d
-  #   environment:
-  #     POSTGRES_DB: local_db
-  #     POSTGRES_USER: local_user
-  #     POSTGRES_PASSWORD: local_pass
-    # # なぜかこれだとhealthcheckに失敗する
+  postgres:
+    container_name: postgres
+    image: postgres:17beta2
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres/init:/docker-entrypoint-initdb.d
+      - ./postgres/postgresql.conf:/etc/postgresql/postgresql.conf
+    environment:
+      POSTGRES_DB: local_db
+      POSTGRES_USER: local_user
+      POSTGRES_PASSWORD: local_pass
+      POSTGRES_INIT_DB_ARGS: --encoding=UTF-8
     # healthcheck:
-    #   test: pg_isready -U $${POSTGRES_USER} || exit 1
+    #   test: ["CMD-SHELL", "pg_isready"]
     #   interval: 5s
     #   timeout: 5s
-    #   retries: 10
+    #   retries: 5
     #   start_period: 5s

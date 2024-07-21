@@ -24,6 +24,6 @@ tasks:
   exec-mysql:
     cmds:
       - docker compose exec mysql mysql local_db -ulocal_user -plocal_pass
-  # exec-postgres:
-  #   cmds:
-  #     - docker compose exec postgres psql -U local_user -d local_db
+  exec-postgres:
+    cmds:
+      - docker compose exec postgres psql -U local_user -d local_db

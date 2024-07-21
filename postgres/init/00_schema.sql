@@ -1,6 +1,6 @@
--- CREATE DATABASE local_db;
+GRANT ALL PRIVILEGES ON DATABASE local_db TO local_user;
 
--- \c local_db;
+\c local_db;
 
 DROP TABLE IF EXISTS todos;
 
@@ -13,8 +13,6 @@ CREATE TABLE todos (
 	deleted_at timestamp NULL,
   PRIMARY KEY (id)
 );
-
-CREATE SEQUENCE todos_id_seq START 1;
 
 CREATE OR REPLACE FUNCTION update_by_current_timestamp() RETURNS TRIGGER AS
 $$
