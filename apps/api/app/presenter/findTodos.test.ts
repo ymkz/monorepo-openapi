@@ -1,10 +1,11 @@
 import { strict as assert, describe, test } from 'poku'
+import { env } from '../helper/env'
 import { app } from '../register'
 
 describe('findTodosHandlers')
 
 test('ok', async () => {
-	const request = new Request('http://localhost:4000/todos', {
+	const request = new Request(`${env.APP_HOST}/todos`, {
 		method: 'GET',
 	})
 

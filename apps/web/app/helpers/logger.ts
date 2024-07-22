@@ -1,6 +1,5 @@
 import { pino } from 'pino'
 import { Temporal } from 'temporal-polyfill'
-import { context } from '../helper/context'
 import { env } from './env'
 
 const timestamp = () => {
@@ -15,7 +14,4 @@ export const logger = pino({
 		level: (label) => ({ severity: label }),
 		bindings: () => ({}),
 	},
-	mixin: () => ({
-		reqId: context.getStore()?.get('reqId'),
-	}),
 })

@@ -1,5 +1,8 @@
+import { config } from '@dotenvx/dotenvx'
 import { vitePlugin as remix } from '@remix-run/dev'
 import { defineConfig } from 'vite'
+
+config({ path: '.env.local' })
 
 export default defineConfig({
 	clearScreen: false,

@@ -1,10 +1,11 @@
 import { strict as assert, describe, test } from 'poku'
+import { env } from '../helper/env'
 import { app } from '../register'
 
 describe('healthcheckHandlers')
 
 test('ok', async () => {
-	const request = new Request('http://localhost:4000', {
+	const request = new Request(`${env.APP_HOST}`, {
 		method: 'GET',
 	})
 
@@ -15,7 +16,7 @@ test('ok', async () => {
 })
 
 test('ok', async () => {
-	const request = new Request('http://localhost:4000/healthz', {
+	const request = new Request(`${env.APP_HOST}/healthz`, {
 		method: 'GET',
 	})
 

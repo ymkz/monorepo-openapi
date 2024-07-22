@@ -1,10 +1,11 @@
 import { strict as assert, describe, test } from 'poku'
+import { env } from '../helper/env'
 import { app } from '../register'
 
 describe('deleteTodoHandlers')
 
 test('ok', async () => {
-	const request = new Request('http://localhost:4000/todos/1', {
+	const request = new Request(`${env.APP_HOST}/todos/1`, {
 		method: 'DELETE',
 	})
 
@@ -14,8 +15,8 @@ test('ok', async () => {
 	assert.equal(await response.text(), 'deleteTodo')
 })
 
-test('Invalid path param', async () => {
-	const request = new Request('http://localhost:4000/todos/hello', {
+test('invalid path param', async () => {
+	const request = new Request(`${env.APP_HOST}/todos/hello`, {
 		method: 'DELETE',
 	})
 

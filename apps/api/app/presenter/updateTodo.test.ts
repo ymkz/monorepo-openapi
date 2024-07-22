@@ -1,10 +1,11 @@
 import { strict as assert, describe, test } from 'poku'
+import { env } from '../helper/env'
 import { app } from '../register'
 
 describe('updateTodoHandlers')
 
 test('ok', async () => {
-	const request = new Request('http://localhost:4000/todos/1', {
+	const request = new Request(`${env.APP_HOST}/todos/1`, {
 		method: 'PUT',
 		body: JSON.stringify({ title: 'テストタイトル' }),
 		headers: new Headers({ 'Content-Type': 'application/json' }),
@@ -17,7 +18,7 @@ test('ok', async () => {
 })
 
 test('invalid path param', async () => {
-	const request = new Request('http://localhost:4000/todos/hello', {
+	const request = new Request(`${env.APP_HOST}/todos/hello`, {
 		method: 'PUT',
 	})
 
@@ -27,7 +28,7 @@ test('invalid path param', async () => {
 })
 
 test('invalid body', async () => {
-	const request = new Request('http://localhost:4000/todos/1', {
+	const request = new Request(`${env.APP_HOST}/todos/1`, {
 		method: 'PUT',
 		body: JSON.stringify({ foo: 'bar' }),
 	})

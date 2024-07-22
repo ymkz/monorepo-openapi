@@ -1,10 +1,11 @@
 import { strict as assert, describe, test } from 'poku'
+import { env } from '../helper/env'
 import { app } from '../register'
 
 describe('createTodoHandlers')
 
 test('ok', async () => {
-	const request = new Request('http://localhost:4000/todos', {
+	const request = new Request(`${env.APP_HOST}/todos`, {
 		method: 'POST',
 		body: JSON.stringify({ title: 'テストタイトル' }),
 		headers: new Headers({ 'Content-Type': 'application/json' }),
@@ -17,7 +18,7 @@ test('ok', async () => {
 })
 
 test('invalid body', async () => {
-	const request = new Request('http://localhost:4000/todos', {
+	const request = new Request(`${env.APP_HOST}/todos`, {
 		method: 'POST',
 		body: JSON.stringify({ foo: 'bar' }),
 	})
