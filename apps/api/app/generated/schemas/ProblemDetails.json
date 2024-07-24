@@ -1,0 +1,23 @@
+{
+  "description": "Problem Details (RFC9457)",
+  "type": "object",
+  "properties": {
+    "title": { "description": "主要なエラーの要因", "type": "string", "example": "DB Connection Timeout" },
+    "type": { "description": "エラーコード", "type": "string", "example": "E_001" },
+    "detail": {
+      "description": "エラーの詳細に関するメッセージ",
+      "type": "string",
+      "example": "failed to establish connection"
+    },
+    "status": {
+      "description": "HTTPステータスコード",
+      "type": "integer",
+      "format": "int32",
+      "example": 500,
+      "maximum": 600,
+      "minimum": 400
+    }
+  },
+  "required": ["title", "type", "detail", "status"],
+  "x-readme-ref-name": "ProblemDetails"
+}

@@ -33,6 +33,15 @@ find . -name 'pnpm-lock.yaml' -type f -prune -exec rm -rf '{}' +
 find . -name 'tsconfig.tsbuildinfo' -type f -prune -exec rm -rf '{}' +
 ```
 
+## generate
+
+directory: ./apps/api
+
+```
+sqlc generate
+pnpm biome check --write app/gateway/datasource
+```
+
 ## up
 
 up docker compose process

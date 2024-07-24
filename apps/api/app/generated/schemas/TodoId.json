@@ -1,0 +1,7 @@
+{
+  "description": "連番で発番されるid",
+  "type": "integer",
+  "format": "int32",
+  "example": 1,
+  "x-readme-ref-name": "TodoId"
+}
