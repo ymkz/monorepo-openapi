@@ -9,9 +9,9 @@ OpenAPIでbackendとfrontendをいい感じに管理するお試し実装のリ�
 * [spec](apps/spec)
 * [web](apps/web)
 
-# Tasks
+## Tasks
 
-## init
+### init
 
 initilize for local development with .env file
 
@@ -20,7 +20,7 @@ cp apps/api/.env.example apps/api/.env.local
 cp apps/web/.env.example apps/web/.env.local
 ```
 
-## clean
+### clean
 
 remove generated files/directories for refresh
 
@@ -33,7 +33,7 @@ find . -name 'pnpm-lock.yaml' -type f -prune -exec rm -rf '{}' +
 find . -name 'tsconfig.tsbuildinfo' -type f -prune -exec rm -rf '{}' +
 ```
 
-## generate
+### generate
 
 directory: ./apps/api
 
@@ -42,7 +42,7 @@ sqlc generate
 pnpm biome check --write app/gateway/datasource
 ```
 
-## up
+### up
 
 up docker compose process
 
@@ -50,7 +50,7 @@ up docker compose process
 docker compose up -d --wait --wait-timeout=60
 ```
 
-## down
+### down
 
 down docker compose process
 
@@ -58,7 +58,7 @@ down docker compose process
 docker compose down
 ```
 
-## exec-mysql
+### exec-mysql
 
 connect to mysql database on docker compose
 
@@ -66,7 +66,7 @@ connect to mysql database on docker compose
 docker compose exec mysql mysql local_db -ulocal_user -plocal_pass
 ```
 
-## exec-postgres
+### exec-postgres
 
 connect to postgres database on docker compose
 
