@@ -40,13 +40,13 @@ importers:
         version: 1.12.0
       '@hono/zod-validator':
         specifier: 0.2.2
-        version: 0.2.2(hono@4.5.0)(zod@3.23.8)
+        version: 0.2.2(hono@4.5.2)(zod@3.23.8)
       '@t3-oss/env-core':
         specifier: 0.11.0
         version: 0.11.0(typescript@5.5.4)(zod@3.23.8)
       hono:
-        specifier: 4.5.0
-        version: 4.5.0
+        specifier: 4.5.2
+        version: 4.5.2
       mysql2:
         specifier: 3.10.3
         version: 3.10.3
@@ -54,8 +54,8 @@ importers:
         specifier: 7.0.0
         version: 7.0.0
       pino:
-        specifier: 9.3.1
-        version: 9.3.1
+        specifier: 9.3.2
+        version: 9.3.2
       postgres:
         specifier: 3.4.4
         version: 3.4.4
@@ -100,8 +100,8 @@ importers:
   apps/web:
     dependencies:
       '@hey-api/client-fetch':
-        specifier: 0.1.10
-        version: 0.1.10
+        specifier: 0.1.12
+        version: 0.1.12
       '@remix-run/node':
         specifier: 2.10.3
         version: 2.10.3(typescript@5.5.4)
@@ -118,8 +118,8 @@ importers:
         specifier: 5.1.13
         version: 5.1.13
       pino:
-        specifier: 9.3.1
-        version: 9.3.1
+        specifier: 9.3.2
+        version: 9.3.2
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -1368,8 +1368,8 @@ packages:
     peerDependencies:
       vue: ^3.2.0
 
-  '@hey-api/client-fetch@0.1.10':
-    resolution: {integrity: sha512-o5XZMrfoq81EqnhrQAPctFEOaeUBIaUr0tV+TUT23j9QLad/I5bWdzNR3y2uxyF98Ytj5m7NqvPCc9ZexvvJww==}
+  '@hey-api/client-fetch@0.1.12':
+    resolution: {integrity: sha512-okgbN60yMu4kDtuAZvKtVLdOZQvrK6iAf8+w5hCR4w2EHI9LOKIvzCdHjuh12WhRW6bx776b2FMnXRidQUmo1w==}
 
   '@hey-api/openapi-ts@0.50.1':
     resolution: {integrity: sha512-9xc5TZP7srz2R90B2qDOPgRYHLjnrcpKKMDcGQo90T4gYLgBupus8cKY/s+gps7AVtxYeI7M9IDvHOc3t+5UFA==}
@@ -3601,8 +3601,8 @@ packages:
   highlightjs-vue@1.0.0:
     resolution: {integrity: sha512-PDEfEF102G23vHmPhLyPboFCD+BkMGu+GuJe2d9/eH4FsCwvgBpnc9n0pGE+ffKdph38s6foEZiEjdgHdzp+IA==}
 
-  hono@4.5.0:
-    resolution: {integrity: sha512-ZbezypZfn4odyApjCCv+Fw5OgweBqRLA/EsMyc4FUknFvBJcBIKhHy4sqmD1rWpBc/3wUlaQ6tqOPjk36R1ckg==}
+  hono@4.5.2:
+    resolution: {integrity: sha512-93P8XEALrHAUGRZoqXs8MDL3w9mDgRpbW9Sy5x4LS7srg78bKUw7EGynxze+Ft1e/rLGmDAbxeSTMu6dHUSRDw==}
     engines: {node: '>=16.0.0'}
 
   hookable@5.5.3:
@@ -4907,8 +4907,8 @@ packages:
   pino-std-serializers@7.0.0:
     resolution: {integrity: sha512-e906FRY0+tV27iq4juKzSYPbUj2do2X2JX4EzSca1631EB2QJQUqGbDuERal7LCtOpxl6x3+nvo9NPZcmjkiFA==}
 
-  pino@9.3.1:
-    resolution: {integrity: sha512-afSfrq/hUiW/MFmQcLEwV9Zh8Ry6MrMTOyBU53o/fc0gEl+1OZ/Fks/xQCM2nOC0C/OfDtQMnT2d8c3kpcfSzA==}
+  pino@9.3.2:
+    resolution: {integrity: sha512-WtARBjgZ7LNEkrGWxMBN/jvlFiE17LTbBoH0konmBU684Kd0uIiDwBXlcTCW7iJnA6HfIKwUssS/2AC6cDEanw==}
     hasBin: true
 
   pirates@4.0.6:
@@ -5074,8 +5074,8 @@ packages:
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
-  process-warning@3.0.0:
-    resolution: {integrity: sha512-mqn0kFRl0EoqhnL0GQ0veqFHyIN1yig9RHh/InzORTUiZHFRAur+aMtRkELNwGs9aNwKS6tg/An4NYBPGwvtzQ==}
+  process-warning@4.0.0:
+    resolution: {integrity: sha512-/MyYDxttz7DfGMMHiysAsFE4qF+pQYAA8ziO/3NcRVrQ5fSk+Mns4QZA/oRPFzvcqNoVJXQNWNAsdwBXLUkQKw==}
 
   process@0.11.10:
     resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
@@ -7543,7 +7543,7 @@ snapshots:
       '@tanstack/vue-virtual': 3.8.3(vue@3.4.33(typescript@5.5.4))
       vue: 3.4.33(typescript@5.5.4)
 
-  '@hey-api/client-fetch@0.1.10': {}
+  '@hey-api/client-fetch@0.1.12': {}
 
   '@hey-api/openapi-ts@0.50.1(typescript@5.5.4)':
     dependencies:
@@ -7558,9 +7558,9 @@ snapshots:
 
   '@hono/node-server@1.12.0': {}
 
-  '@hono/zod-validator@0.2.2(hono@4.5.0)(zod@3.23.8)':
+  '@hono/zod-validator@0.2.2(hono@4.5.2)(zod@3.23.8)':
     dependencies:
-      hono: 4.5.0
+      hono: 4.5.2
       zod: 3.23.8
 
   '@humanwhocodes/momoa@2.0.4': {}
@@ -8377,7 +8377,7 @@ snapshots:
       commander: 12.1.0
       github-slugger: 2.0.0
       glob: 10.4.5
-      hono: 4.5.0
+      hono: 4.5.2
       kleur: 4.1.5
       prettyjson: 1.2.5
     transitivePeerDependencies:
@@ -8449,7 +8449,7 @@ snapshots:
     dependencies:
       '@scalar/oas-utils': 0.2.17(typescript@5.5.4)
       '@scalar/openapi-parser': 0.7.2
-      hono: 4.5.0
+      hono: 4.5.2
     transitivePeerDependencies:
       - debug
       - typescript
@@ -8564,7 +8564,7 @@ snapshots:
   '@scalar/void-server@2.0.7':
     dependencies:
       '@hono/node-server': 1.12.0
-      hono: 4.5.0
+      hono: 4.5.2
       object-to-xml: 2.0.0
 
   '@sec-ant/readable-stream@0.4.1': {}
@@ -10466,7 +10466,7 @@ snapshots:
 
   highlightjs-vue@1.0.0: {}
 
-  hono@4.5.0: {}
+  hono@4.5.2: {}
 
   hookable@5.5.3: {}
 
@@ -12058,14 +12058,14 @@ snapshots:
 
   pino-std-serializers@7.0.0: {}
 
-  pino@9.3.1:
+  pino@9.3.2:
     dependencies:
       atomic-sleep: 1.0.0
       fast-redact: 3.5.0
       on-exit-leak-free: 2.1.2
       pino-abstract-transport: 1.2.0
       pino-std-serializers: 7.0.0
-      process-warning: 3.0.0
+      process-warning: 4.0.0
       quick-format-unescaped: 4.0.4
       real-require: 0.2.0
       safe-stable-stringify: 2.4.3
@@ -12224,7 +12224,7 @@ snapshots:
 
   process-nextick-args@2.0.1: {}
 
-  process-warning@3.0.0: {}
+  process-warning@4.0.0: {}
 
   process@0.11.10: {}
 
