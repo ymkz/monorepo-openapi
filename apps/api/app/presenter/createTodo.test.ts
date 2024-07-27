@@ -20,7 +20,7 @@ test('ok', async () => {
 test('invalid body', async () => {
 	const request = new Request(`${env.APP_HOST}/todos`, {
 		method: 'POST',
-		body: JSON.stringify({ foo: 'bar' }),
+		headers: new Headers({ 'Content-Type': 'application/json' }),
 	})
 
 	const response = await app.request(request)
