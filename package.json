@@ -21,7 +21,7 @@
     "@types/node": "20.14.12",
     "concurrently": "8.2.2",
     "knip": "5.27.0",
-    "poku": "2.2.1",
+    "poku": "2.2.4",
     "tinyspy": "3.0.0",
     "turbo": "2.0.9",
     "typescript": "5.5.4"

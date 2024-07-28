@@ -21,8 +21,8 @@ importers:
         specifier: 5.27.0
         version: 5.27.0(@types/node@20.14.12)(typescript@5.5.4)
       poku:
-        specifier: 2.2.1
-        version: 2.2.1
+        specifier: 2.2.4
+        version: 2.2.4
       tinyspy:
         specifier: 3.0.0
         version: 3.0.0
@@ -94,8 +94,8 @@ importers:
   apps/spec:
     devDependencies:
       '@scalar/cli':
-        specifier: 0.2.162
-        version: 0.2.162(postcss@8.4.40)(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(tailwindcss@3.4.6)(typescript@5.5.4)
+        specifier: 0.2.163
+        version: 0.2.163(postcss@8.4.40)(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(tailwindcss@3.4.7)(typescript@5.5.4)
 
   apps/web:
     dependencies:
@@ -137,8 +137,8 @@ importers:
         specifier: 1.6.4
         version: 1.6.4
       '@hey-api/openapi-ts':
-        specifier: 0.50.1
-        version: 0.50.1(typescript@5.5.4)
+        specifier: 0.50.2
+        version: 0.50.2(typescript@5.5.4)
       '@remix-run/dev':
         specifier: 2.10.3
         version: 2.10.3(@remix-run/react@2.10.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(@remix-run/serve@2.10.3(typescript@5.5.4))(@types/node@20.14.12)(typescript@5.5.4)(vite@5.3.5(@types/node@20.14.12))
@@ -155,8 +155,8 @@ importers:
         specifier: 8.4.40
         version: 8.4.40
       tailwindcss:
-        specifier: 3.4.6
-        version: 3.4.6
+        specifier: 3.4.7
+        version: 3.4.7
       vite:
         specifier: 5.3.5
         version: 5.3.5(@types/node@20.14.12)
@@ -1371,8 +1371,8 @@ packages:
   '@hey-api/client-fetch@0.1.12':
     resolution: {integrity: sha512-okgbN60yMu4kDtuAZvKtVLdOZQvrK6iAf8+w5hCR4w2EHI9LOKIvzCdHjuh12WhRW6bx776b2FMnXRidQUmo1w==}
 
-  '@hey-api/openapi-ts@0.50.1':
-    resolution: {integrity: sha512-9xc5TZP7srz2R90B2qDOPgRYHLjnrcpKKMDcGQo90T4gYLgBupus8cKY/s+gps7AVtxYeI7M9IDvHOc3t+5UFA==}
+  '@hey-api/openapi-ts@0.50.2':
+    resolution: {integrity: sha512-DkkjgLYUgbD0CJAAA79R9Dj2E8YOh0/Gus8lky6pEHL6ntirkfe7Biu2J1pddfdoO37qx14BKkA7exgOhvZYrQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -1941,16 +1941,16 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scalar/api-client@2.0.32':
-    resolution: {integrity: sha512-LgIcNEh/vUPPHu3LEhI/JjLt526D0MmF0wA5WyrlTEAX8fRnicBwUumktTyMjAKPaVVrYvcmn4/v09iv9N/+Gg==}
+  '@scalar/api-client@2.0.33':
+    resolution: {integrity: sha512-LEAMqjnAbSHNet6hwikZijfl6LpguLZSKWAxsDSwvfkAFXfEXahc6joLRaELmAM0OhJfhjj8gHYJRXCYqSstXw==}
     engines: {node: '>=18'}
 
-  '@scalar/api-reference@1.24.57':
-    resolution: {integrity: sha512-cnRFF/0fHeayr2Su5kEosu7fFT1Sy2lL5kO8nmwAuxC+uTA81xTsjaTny8NKduqAo+iwUuDn1pHjtDrY8OuKKA==}
+  '@scalar/api-reference@1.24.58':
+    resolution: {integrity: sha512-ptNaTqWXYKoWOYm+2MIUDKs1F0EaRIehFecH6DHNsf1O7Ext9/13udxmdvaIns0peBnsg/wzUBpwZKDtRnJ99A==}
     engines: {node: '>=18'}
 
-  '@scalar/cli@0.2.162':
-    resolution: {integrity: sha512-5uMDthMb+n4EKnN2tSmsXahoP5gVnMB37m1jP8++M/pLc/ieLrMO6oQPOMjhfuiWE9R9MyADNMHhEFF+uXf1Hg==}
+  '@scalar/cli@0.2.163':
+    resolution: {integrity: sha512-6QAbFgWz1nJtN6oYZ49lqf3d1V2LkOT5iZvGfFUGscCsa+IDb8j1TdsPuFDveEA3VcYgfNKZHogLGJ8XTL4zXQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1958,16 +1958,16 @@ packages:
     resolution: {integrity: sha512-YUSlnNapSUuLKDFiiQ54ok+gHD9ufCifI2CAU5HtIvt8pS/Ns4r0D/N+RuEWu5HccbBt/S4cLYkwlg4q76ym/A==}
     engines: {node: '>=18'}
 
-  '@scalar/components@0.12.19':
-    resolution: {integrity: sha512-pbSXOC7Jo+6hxV9N5UCu9ZzbI3a4V2F03lziaPFtiTk0rOxJwNU1T1R5ioBYhP/Jz3PujVj5G5lnEdwqukLthg==}
+  '@scalar/components@0.12.20':
+    resolution: {integrity: sha512-2t+xH25seLkPhBS4nohMq2eXhlm1Ads6Q+KcASv2I3ICLieMzgMPtvWMJT1REESS75fZdezhGwiW2U+FizDCmw==}
     engines: {node: '>=18'}
 
   '@scalar/draggable@0.1.3':
     resolution: {integrity: sha512-A6lUgTV8q/zJGkzHerY1T+X3l3GXmCCg09Z7OU7j6yDyyuj2BSTblthncoD5sN3BdwLjHwkm9ecehfvaE0pj5w==}
     engines: {node: '>=18'}
 
-  '@scalar/mock-server@0.2.19':
-    resolution: {integrity: sha512-GE/q1GQzh6Qs8oCsb8wNy3NzYuBn+luA5Ktmgy0k/o+Mt1L9N3gs1RorkgS33uvLhxmDShNSOdDkOq91uf0QaQ==}
+  '@scalar/mock-server@0.2.20':
+    resolution: {integrity: sha512-zjQniKVcgT2aV7RZ4POwm0kMwACJnYjcFDgoOhJkPTXJfL7W0NayeiXZFs51llInk6bfKAQ7nuv38q563COqMQ==}
     engines: {node: '>=18'}
 
   '@scalar/oas-utils@0.2.17':
@@ -2019,8 +2019,8 @@ packages:
     resolution: {integrity: sha512-bj3RkmGGtCPNgEuopNLOXfQtFM3KnsfAQc9LQEr6iC9FNUa+Ddrlq85wgAK4W740aducchrgK+fBZDpXQbzQTw==}
     engines: {node: '>=18'}
 
-  '@scalar/void-server@2.0.7':
-    resolution: {integrity: sha512-3dC0FeJAhFJ0E/Ukv45y/Fhjz8xI0O4FRfDF9HpYtulxRsAHOM+cfkVtwcWLXVxZw6rp5zFoxRz+ClQmVw4wfg==}
+  '@scalar/void-server@2.0.8':
+    resolution: {integrity: sha512-Qxx5LFci1md36u+hu5gD3wMgahDMX4uLRJq3rr5FzQNI1J6Fmxku01m8IYfYWta6MqWvpijI/WqLzi9wxconcQ==}
     engines: {node: '>=18'}
 
   '@sec-ant/readable-stream@0.4.1':
@@ -4940,8 +4940,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  poku@2.2.1:
-    resolution: {integrity: sha512-1Kc55uslAAPvy17t7kVORS8zLNG+wFN5/M5pSVnUe2QJNzxO5NicdZ54+YZDamSs7W552BXmDiMSTTKlp4oAOA==}
+  poku@2.2.4:
+    resolution: {integrity: sha512-cTP5PkNtKnrGLE5fedq8+KanTh0Z8CXxxQADTWCekiifaNQ01mnBfhGnBXBV7UipyUW+Ys3cfmrrjnKK5jeKFA==}
     engines: {bun: '>=1.0.0', deno: '>=1.30.0', node: '>=8.17.0', typescript: '>=4.7.2'}
     hasBin: true
 
@@ -5669,8 +5669,8 @@ packages:
   tailwind-merge@2.4.0:
     resolution: {integrity: sha512-49AwoOQNKdqKPd9CViyH5wJoSKsCDjUlzL8DxuGp3P1FsGY36NJDAa18jLZcaHAUUuTj+JB8IAo8zWgBNvBF7A==}
 
-  tailwindcss@3.4.6:
-    resolution: {integrity: sha512-1uRHzPB+Vzu57ocybfZ4jh5Q3SdlH7XW23J5sQoM9LhE9eIOlzxer/3XPSsycvih3rboRsvt0QCmzSrqyOYUIA==}
+  tailwindcss@3.4.7:
+    resolution: {integrity: sha512-rxWZbe87YJb4OcSopb7up2Ba4U82BoiSGUdoDr3Ydrg9ckxFS/YWsvhN323GMcddgU65QRy7JndC7ahhInhvlQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -7534,9 +7534,9 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  '@headlessui/tailwindcss@0.2.1(tailwindcss@3.4.6)':
+  '@headlessui/tailwindcss@0.2.1(tailwindcss@3.4.7)':
     dependencies:
-      tailwindcss: 3.4.6
+      tailwindcss: 3.4.7
 
   '@headlessui/vue@1.7.22(vue@3.4.33(typescript@5.5.4))':
     dependencies:
@@ -7545,7 +7545,7 @@ snapshots:
 
   '@hey-api/client-fetch@0.1.12': {}
 
-  '@hey-api/openapi-ts@0.50.1(typescript@5.5.4)':
+  '@hey-api/openapi-ts@0.50.2(typescript@5.5.4)':
     dependencies:
       '@apidevtools/json-schema-ref-parser': 11.6.4
       c12: 1.11.1
@@ -8289,11 +8289,11 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.19.0':
     optional: true
 
-  '@scalar/api-client@2.0.32(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(tailwindcss@3.4.6)(typescript@5.5.4)':
+  '@scalar/api-client@2.0.33(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(tailwindcss@3.4.7)(typescript@5.5.4)':
     dependencies:
-      '@headlessui/tailwindcss': 0.2.1(tailwindcss@3.4.6)
+      '@headlessui/tailwindcss': 0.2.1(tailwindcss@3.4.7)
       '@headlessui/vue': 1.7.22(vue@3.4.33(typescript@5.5.4))
-      '@scalar/components': 0.12.19(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(typescript@5.5.4)
+      '@scalar/components': 0.12.20(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(typescript@5.5.4)
       '@scalar/draggable': 0.1.3(typescript@5.5.4)
       '@scalar/oas-utils': 0.2.17(typescript@5.5.4)
       '@scalar/object-utils': 1.1.5(vue@3.4.33(typescript@5.5.4))
@@ -8326,12 +8326,12 @@ snapshots:
       - typescript
       - vitest
 
-  '@scalar/api-reference@1.24.57(postcss@8.4.40)(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(tailwindcss@3.4.6)(typescript@5.5.4)':
+  '@scalar/api-reference@1.24.58(postcss@8.4.40)(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(tailwindcss@3.4.7)(typescript@5.5.4)':
     dependencies:
       '@floating-ui/vue': 1.1.2(vue@3.4.33(typescript@5.5.4))
       '@headlessui/vue': 1.7.22(vue@3.4.33(typescript@5.5.4))
-      '@scalar/api-client': 2.0.32(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(tailwindcss@3.4.6)(typescript@5.5.4)
-      '@scalar/components': 0.12.19(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(typescript@5.5.4)
+      '@scalar/api-client': 2.0.33(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(tailwindcss@3.4.7)(typescript@5.5.4)
+      '@scalar/components': 0.12.20(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(typescript@5.5.4)
       '@scalar/oas-utils': 0.2.17(typescript@5.5.4)
       '@scalar/openapi-parser': 0.7.2
       '@scalar/snippetz': 0.1.6
@@ -8364,16 +8364,16 @@ snapshots:
       - typescript
       - vitest
 
-  '@scalar/cli@0.2.162(postcss@8.4.40)(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(tailwindcss@3.4.6)(typescript@5.5.4)':
+  '@scalar/cli@0.2.163(postcss@8.4.40)(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(tailwindcss@3.4.7)(typescript@5.5.4)':
     dependencies:
       '@clack/prompts': 0.7.0
       '@hono/node-server': 1.12.0
       '@parcel/watcher': 2.4.1
-      '@scalar/api-reference': 1.24.57(postcss@8.4.40)(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(tailwindcss@3.4.6)(typescript@5.5.4)
-      '@scalar/mock-server': 0.2.19(typescript@5.5.4)
+      '@scalar/api-reference': 1.24.58(postcss@8.4.40)(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(tailwindcss@3.4.7)(typescript@5.5.4)
+      '@scalar/mock-server': 0.2.20(typescript@5.5.4)
       '@scalar/oas-utils': 0.2.17(typescript@5.5.4)
       '@scalar/openapi-parser': 0.7.2
-      '@scalar/void-server': 2.0.7
+      '@scalar/void-server': 2.0.8
       commander: 12.1.0
       github-slugger: 2.0.0
       glob: 10.4.5
@@ -8415,7 +8415,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@scalar/components@0.12.19(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(typescript@5.5.4)':
+  '@scalar/components@0.12.20(storybook@8.2.6(@babel/preset-env@7.24.8(@babel/core@7.24.9)))(typescript@5.5.4)':
     dependencies:
       '@floating-ui/utils': 0.2.5
       '@floating-ui/vue': 1.1.2(vue@3.4.33(typescript@5.5.4))
@@ -8445,11 +8445,12 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@scalar/mock-server@0.2.19(typescript@5.5.4)':
+  '@scalar/mock-server@0.2.20(typescript@5.5.4)':
     dependencies:
       '@scalar/oas-utils': 0.2.17(typescript@5.5.4)
       '@scalar/openapi-parser': 0.7.2
       hono: 4.5.2
+      object-to-xml: 2.0.0
     transitivePeerDependencies:
       - debug
       - typescript
@@ -8561,7 +8562,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@scalar/void-server@2.0.7':
+  '@scalar/void-server@2.0.8':
     dependencies:
       '@hono/node-server': 1.12.0
       hono: 4.5.2
@@ -12105,7 +12106,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  poku@2.2.1: {}
+  poku@2.2.4: {}
 
   possible-typed-array-names@1.0.0: {}
 
@@ -12960,7 +12961,7 @@ snapshots:
 
   tailwind-merge@2.4.0: {}
 
-  tailwindcss@3.4.6:
+  tailwindcss@3.4.7:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
