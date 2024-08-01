@@ -40,13 +40,13 @@ importers:
         version: 1.12.0
       '@hono/zod-validator':
         specifier: 0.2.2
-        version: 0.2.2(hono@4.5.2)(zod@3.23.8)
+        version: 0.2.2(hono@4.5.3)(zod@3.23.8)
       '@t3-oss/env-core':
         specifier: 0.11.0
         version: 0.11.0(typescript@5.5.4)(zod@3.23.8)
       hono:
-        specifier: 4.5.2
-        version: 4.5.2
+        specifier: 4.5.3
+        version: 4.5.3
       mysql2:
         specifier: 3.11.0
         version: 3.11.0
@@ -100,8 +100,8 @@ importers:
   apps/web:
     dependencies:
       '@hey-api/client-fetch':
-        specifier: 0.1.12
-        version: 0.1.12
+        specifier: 0.1.14
+        version: 0.1.14
       '@remix-run/node':
         specifier: 2.10.3
         version: 2.10.3(typescript@5.5.4)
@@ -1368,8 +1368,8 @@ packages:
     peerDependencies:
       vue: ^3.2.0
 
-  '@hey-api/client-fetch@0.1.12':
-    resolution: {integrity: sha512-okgbN60yMu4kDtuAZvKtVLdOZQvrK6iAf8+w5hCR4w2EHI9LOKIvzCdHjuh12WhRW6bx776b2FMnXRidQUmo1w==}
+  '@hey-api/client-fetch@0.1.14':
+    resolution: {integrity: sha512-6RoO2prOVrQfx2wClJ7DkeIVWQokiRLIdqiuxvFTfWEQVfOc+hQhAw6/IijYrSM9cA7A7DzmHpzTLc/gbQ7/2Q==}
 
   '@hey-api/openapi-ts@0.50.2':
     resolution: {integrity: sha512-DkkjgLYUgbD0CJAAA79R9Dj2E8YOh0/Gus8lky6pEHL6ntirkfe7Biu2J1pddfdoO37qx14BKkA7exgOhvZYrQ==}
@@ -3601,8 +3601,8 @@ packages:
   highlightjs-vue@1.0.0:
     resolution: {integrity: sha512-PDEfEF102G23vHmPhLyPboFCD+BkMGu+GuJe2d9/eH4FsCwvgBpnc9n0pGE+ffKdph38s6foEZiEjdgHdzp+IA==}
 
-  hono@4.5.2:
-    resolution: {integrity: sha512-93P8XEALrHAUGRZoqXs8MDL3w9mDgRpbW9Sy5x4LS7srg78bKUw7EGynxze+Ft1e/rLGmDAbxeSTMu6dHUSRDw==}
+  hono@4.5.3:
+    resolution: {integrity: sha512-r26WwwbKD3BAYdfB294knNnegNda7VfV1tVn66D9Kvl9WQTdrR+5eKdoeaQNHQcC3Gr0KBikzAtjd6VsRGVSaw==}
     engines: {node: '>=16.0.0'}
 
   hookable@5.5.3:
@@ -7543,7 +7543,7 @@ snapshots:
       '@tanstack/vue-virtual': 3.8.3(vue@3.4.33(typescript@5.5.4))
       vue: 3.4.33(typescript@5.5.4)
 
-  '@hey-api/client-fetch@0.1.12': {}
+  '@hey-api/client-fetch@0.1.14': {}
 
   '@hey-api/openapi-ts@0.50.2(typescript@5.5.4)':
     dependencies:
@@ -7558,9 +7558,9 @@ snapshots:
 
   '@hono/node-server@1.12.0': {}
 
-  '@hono/zod-validator@0.2.2(hono@4.5.2)(zod@3.23.8)':
+  '@hono/zod-validator@0.2.2(hono@4.5.3)(zod@3.23.8)':
     dependencies:
-      hono: 4.5.2
+      hono: 4.5.3
       zod: 3.23.8
 
   '@humanwhocodes/momoa@2.0.4': {}
@@ -8377,7 +8377,7 @@ snapshots:
       commander: 12.1.0
       github-slugger: 2.0.0
       glob: 10.4.5
-      hono: 4.5.2
+      hono: 4.5.3
       kleur: 4.1.5
       prettyjson: 1.2.5
     transitivePeerDependencies:
@@ -8449,7 +8449,7 @@ snapshots:
     dependencies:
       '@scalar/oas-utils': 0.2.17(typescript@5.5.4)
       '@scalar/openapi-parser': 0.7.2
-      hono: 4.5.2
+      hono: 4.5.3
       object-to-xml: 2.0.0
     transitivePeerDependencies:
       - debug
@@ -8565,7 +8565,7 @@ snapshots:
   '@scalar/void-server@2.0.8':
     dependencies:
       '@hono/node-server': 1.12.0
-      hono: 4.5.2
+      hono: 4.5.3
       object-to-xml: 2.0.0
 
   '@sec-ant/readable-stream@0.4.1': {}
@@ -10467,7 +10467,7 @@ snapshots:
 
   highlightjs-vue@1.0.0: {}
 
-  hono@4.5.2: {}
+  hono@4.5.3: {}
 
   hookable@5.5.3: {}
 
