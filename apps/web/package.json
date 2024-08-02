@@ -29,8 +29,8 @@
   },
   "devDependencies": {
     "@dotenvx/dotenvx": "1.6.4",
-    "@hey-api/openapi-ts": "0.50.2",
-    "@remix-run/dev": "2.10.3",
+    "@hey-api/openapi-ts": "0.52.0",
+    "@remix-run/dev": "2.11.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.19",
