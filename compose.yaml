@@ -6,8 +6,8 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./mysql/init:/docker-entrypoint-initdb.d
-      - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./compose/mysql/init:/docker-entrypoint-initdb.d
+      - ./compose/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: local_db
@@ -26,8 +26,8 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - ./postgres/init:/docker-entrypoint-initdb.d
-      - ./postgres/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./compose/postgres/init:/docker-entrypoint-initdb.d
+      - ./compose/postgres/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
       POSTGRES_DB: local_db
       POSTGRES_USER: local_user
