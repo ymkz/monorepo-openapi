@@ -1,1 +1,1 @@
-# @monorepo-openapi/web
+# @monorepo-openapi/spec

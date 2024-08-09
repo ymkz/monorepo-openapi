@@ -25,21 +25,11 @@ cp apps/web/.env.example apps/web/.env.local
 remove generated files/directories for refresh
 
 ```sh
-find . -name '.turbo' -type d -prune -exec rm -rf '{}' +
 find . -name 'build' -type d -prune -exec rm -rf '{}' +
 find . -name 'generated' -type d -prune -exec rm -rf '{}' +
 find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +
 find . -name 'pnpm-lock.yaml' -type f -prune -exec rm -rf '{}' +
 find . -name 'tsconfig.tsbuildinfo' -type f -prune -exec rm -rf '{}' +
-```
-
-### generate
-
-directory: ./apps/api
-
-```
-sqlc generate
-pnpm biome check --write app/gateway/datasource
 ```
 
 ### up

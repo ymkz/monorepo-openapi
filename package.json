@@ -1,29 +1,33 @@
 {
-  "name": "monorepo-openapi",
+  "name": "@monorepo-openapi/root",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "packageManager": "pnpm@9.7.0",
   "engines": {
     "node": "20.x"
   },
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "test": "turbo run test",
-    "typecheck": "turbo run typecheck",
-    "generate": "turbo run generate",
-    "lint": "biome check",
-    "lint:fix": "biome check --write",
-    "update": "pnpm update --latest --recursive --interactive"
+    "dev": "pnpm --recursive run dev",
+    "build": "pnpm --recursive run build",
+    "test": "pnpm --recursive run test",
+    "typecheck": "pnpm --recursive run typecheck",
+    "lint": "pnpm --recursive run lint",
+    "format": "pnpm --recursive run format",
+    "generate": "pnpm --recursive run /^generate:.*/",
+    "openapi:spec": "serve apps/spec -p 9000",
+    "openapi:mock": "prism mock apps/spec/openapi.yaml -p 8080",
+    "update": "pnpm update --recursive --latest --interactive"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
-    "@types/node": "20.14.14",
-    "concurrently": "8.2.2",
+    "@dotenvx/dotenvx": "1.6.4",
+    "@stoplight/prism-cli": "5.9.0",
+    "@types/node": "22.1.0",
     "knip": "5.27.2",
     "poku": "2.4.3",
+    "serve": "14.2.3",
     "tinyspy": "3.0.0",
-    "turbo": "2.0.12",
     "typescript": "5.5.4"
   }
 }
