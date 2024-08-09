@@ -7,10 +7,10 @@
     "node": "20.x"
   },
   "scripts": {
-    "dev": "tsx watch --env-file=.env.local --clear-screen=false app/server.ts",
+    "dev": "dotenvx run -f .env.local -- tsx watch --clear-screen=false app/server.ts",
     "build": "pkgroll --src=app --dist=build",
     "start": "node build/server.mjs",
-    "test": "poku --env-file=.env.test",
+    "test": "dotenvx run -f .env.test -- poku",
     "typecheck": "tsc --noEmit",
     "lint": "biome check",
     "format": "biome check --write",

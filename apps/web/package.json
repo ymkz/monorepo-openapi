@@ -8,10 +8,10 @@
     "node": "20.x"
   },
   "scripts": {
-    "dev": "remix vite:dev --port 3000",
+    "dev": "dotenvx run -f .env.local -- remix vite:dev --port 3000",
     "build": "remix vite:build",
     "start": "remix-serve ./build/server/index.js",
-    "test": "echo test",
+    "test": "dotenvx run -f .env.test -- echo test",
     "typecheck": "tsc --noEmit",
     "lint": "biome check",
     "format": "biome check --write",
