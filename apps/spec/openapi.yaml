@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: API Spec for monorepo-openapi
+  title: API仕様書 - monorepo-openapi
   version: 0.1.0
   description: |
     ## 概要
@@ -12,24 +12,22 @@ info:
 
     | 環境        | ロール   |
     | ---------- | --------|
-    | alpha      | ✓       |
-    | beta       | ✓       |
     | production | ✓       |
+    | beta       | ✓       |
+    | alpha      | ✓       |
 
-    ## 連絡先
+    ## 問い合わせ
 
     * TBD
 servers:
-  - url: http://localhost:3001
-    description: モック環境
-  - url: http://localhost:4000
-    description: ローカル環境
-  - url: https://alpha.example.com
-    description: アルファ環境
-  - url: https://beta.example.com
-    description: ベータ環境
   - url: https://example.com
     description: プロダクション環境
+  - url: https://beta.example.com
+    description: ベータ環境
+  - url: https://alpha.example.com
+    description: アルファ環境
+  - url: http://localhost:8080
+    description: ローカル環境
 tags:
   - name: Todo
     description: Todoリソースの操作を行うAPI群
