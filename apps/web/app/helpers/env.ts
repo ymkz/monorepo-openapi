@@ -13,5 +13,6 @@ export const env = createEnv({
 		// configs
 		NODE_ENV: z.enum(['development', 'production', 'test']),
 		APP_ENV: z.enum(['local', 'alpha', 'beta', 'production', 'test']),
+		API_URL: z.string().url(),
 	},
 })

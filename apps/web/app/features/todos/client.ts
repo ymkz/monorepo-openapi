@@ -1,5 +1,6 @@
 import { createClient } from '@hey-api/client-fetch'
+import { env } from '../../helpers/env'
 
 export const todosApiClient = createClient({
-	baseUrl: 'http://localhost:3001',
+	baseUrl: env.API_URL,
 })
