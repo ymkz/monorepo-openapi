@@ -48,14 +48,6 @@ down docker compose process
 docker compose down
 ```
 
-### exec-mysql
-
-connect to mysql database on docker compose
-
-```sh
-docker compose exec mysql mysql local_db -ulocal_user -plocal_pass
-```
-
 ### exec-postgres
 
 connect to postgres database on docker compose

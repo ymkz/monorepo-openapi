@@ -26,7 +26,7 @@ servers:
     description: ベータ環境
   - url: https://alpha.example.com
     description: アルファ環境
-  - url: http://localhost:8080
+  - url: http://localhost:4000
     description: ローカル環境
 tags:
   - name: Todo

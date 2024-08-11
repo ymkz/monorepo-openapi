@@ -7,19 +7,10 @@ plugins:
 sql:
   - schema: ddl
     queries: dml
-    engine: mysql
+    engine: postgresql
     codegen:
       - out: app/gateway/datasource
         plugin: ts
         options:
           runtime: node
-          driver: mysql2
-  # - schema: ddl
-  #   queries: dml
-  #   engine: postgresql
-  #   codegen:
-  #     - out: app/gateway/datasource
-  #       plugin: ts
-  #       options:
-  #         runtime: node
-  #         driver: postgres
+          driver: postgres

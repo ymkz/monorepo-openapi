@@ -1,7 +1,4 @@
-import type mysql from 'mysql2/promise'
-import type { RowDataPacket } from 'mysql2/promise'
-
-type Client = mysql.Connection | mysql.Pool
+import type { Sql } from 'postgres'
 
 export const findTodosQuery = `-- name: FindTodos :many
 SELECT id, title, completed_at, created_at, updated_at, deleted_at
@@ -16,28 +13,21 @@ export interface FindTodosRow {
 	deletedAt: Date | null
 }
 
-export async function findTodos(client: Client): Promise<FindTodosRow[]> {
-	const [rows] = await client.query<RowDataPacket[]>({
-		sql: findTodosQuery,
-		values: [],
-		rowsAsArray: true,
-	})
-	return rows.map((row) => {
-		return {
-			id: row[0],
-			title: row[1],
-			completedAt: row[2],
-			createdAt: row[3],
-			updatedAt: row[4],
-			deletedAt: row[5],
-		}
-	})
+export async function findTodos(sql: Sql): Promise<FindTodosRow[]> {
+	return (await sql.unsafe(findTodosQuery, []).values()).map((row) => ({
+		id: row[0],
+		title: row[1],
+		completedAt: row[2],
+		createdAt: row[3],
+		updatedAt: row[4],
+		deletedAt: row[5],
+	}))
 }
 
 export const getTodoQuery = `-- name: GetTodo :one
 SELECT id, title, completed_at, created_at, updated_at, deleted_at
 FROM todos
-WHERE id = ?
+WHERE id = $1
 LIMIT 1`
 
 export interface GetTodoArgs {
@@ -53,47 +43,8 @@ export interface GetTodoRow {
 	deletedAt: Date | null
 }
 
-export async function getTodo(client: Client, args: GetTodoArgs): Promise<GetTodoRow | null> {
-	const [rows] = await client.query<RowDataPacket[]>({
-		sql: getTodoQuery,
-		values: [args.id],
-		rowsAsArray: true,
-	})
-	if (rows.length !== 1) {
-		return null
-	}
-	const row = rows[0]
-	return {
-		id: row[0],
-		title: row[1],
-		completedAt: row[2],
-		createdAt: row[3],
-		updatedAt: row[4],
-		deletedAt: row[5],
-	}
-}
-
-export const getTodoByLastInsertIdQuery = `-- name: GetTodoByLastInsertId :one
-SELECT id, title, completed_at, created_at, updated_at, deleted_at
-FROM todos
-WHERE id = LAST_INSERT_ID()
-LIMIT 1`
-
-export interface GetTodoByLastInsertIdRow {
-	id: number
-	title: string
-	completedAt: Date | null
-	createdAt: Date
-	updatedAt: Date | null
-	deletedAt: Date | null
-}
-
-export async function getTodoByLastInsertId(client: Client): Promise<GetTodoByLastInsertIdRow | null> {
-	const [rows] = await client.query<RowDataPacket[]>({
-		sql: getTodoByLastInsertIdQuery,
-		values: [],
-		rowsAsArray: true,
-	})
+export async function getTodo(sql: Sql, args: GetTodoArgs): Promise<GetTodoRow | null> {
+	const rows = await sql.unsafe(getTodoQuery, [args.id]).values()
 	if (rows.length !== 1) {
 		return null
 	}
@@ -110,47 +61,68 @@ export async function getTodoByLastInsertId(client: Client): Promise<GetTodoByLa
 
 export const createTodoQuery = `-- name: CreateTodo :exec
 INSERT INTO todos (title)
-VALUES (?)`
+VALUES ($1)
+RETURNING id, title, completed_at, created_at, updated_at, deleted_at`
 
 export interface CreateTodoArgs {
 	title: string
 }
 
-export async function createTodo(client: Client, args: CreateTodoArgs): Promise<void> {
-	await client.query({
-		sql: createTodoQuery,
-		values: [args.title],
-	})
+export interface CreateTodoRow {
+	id: number
+	title: string
+	completedAt: Date | null
+	createdAt: Date
+	updatedAt: Date | null
+	deletedAt: Date | null
+}
+
+export async function createTodo(sql: Sql, args: CreateTodoArgs): Promise<void> {
+	await sql.unsafe(createTodoQuery, [args.title])
 }
 
 export const updateTodoQuery = `-- name: UpdateTodo :exec
 UPDATE todos
-SET title = ?
-WHERE id = ?`
+SET title = $2
+WHERE id = $1
+RETURNING id, title, completed_at, created_at, updated_at, deleted_at`
 
 export interface UpdateTodoArgs {
-	title: string
 	id: number
+	title: string
 }
 
-export async function updateTodo(client: Client, args: UpdateTodoArgs): Promise<void> {
-	await client.query({
-		sql: updateTodoQuery,
-		values: [args.title, args.id],
-	})
+export interface UpdateTodoRow {
+	id: number
+	title: string
+	completedAt: Date | null
+	createdAt: Date
+	updatedAt: Date | null
+	deletedAt: Date | null
+}
+
+export async function updateTodo(sql: Sql, args: UpdateTodoArgs): Promise<void> {
+	await sql.unsafe(updateTodoQuery, [args.id, args.title])
 }
 
 export const deleteTodoQuery = `-- name: DeleteTodo :exec
 DELETE FROM todos
-WHERE id = ?`
+WHERE id = $1
+RETURNING id, title, completed_at, created_at, updated_at, deleted_at`
 
 export interface DeleteTodoArgs {
 	id: number
 }
 
-export async function deleteTodo(client: Client, args: DeleteTodoArgs): Promise<void> {
-	await client.query({
-		sql: deleteTodoQuery,
-		values: [args.id],
-	})
+export interface DeleteTodoRow {
+	id: number
+	title: string
+	completedAt: Date | null
+	createdAt: Date
+	updatedAt: Date | null
+	deletedAt: Date | null
+}
+
+export async function deleteTodo(sql: Sql, args: DeleteTodoArgs): Promise<void> {
+	await sql.unsafe(deleteTodoQuery, [args.id])
 }

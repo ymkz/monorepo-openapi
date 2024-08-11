@@ -9,6 +9,8 @@ import { createTodoHandlers } from './presenter/createTodo'
 import { deleteTodoHandlers } from './presenter/deleteTodo'
 import { findTodosHandlers } from './presenter/findTodos'
 import { getTodoHandlers } from './presenter/getTodo'
+import { errorHandler } from './presenter/handler/error'
+import { notFoundHandler } from './presenter/handler/notFound'
 import { healthcheckHandlers } from './presenter/healthcheck'
 import { updateTodoHandlers } from './presenter/updateTodo'
 
@@ -18,7 +20,7 @@ app.use(contextRun())
 app.use(requestId())
 app.use(accessLogger())
 app.use(secureHeaders())
-app.use(cors({ origin: ['http://localhost:3000', 'http://localhost:3002'] }))
+app.use(cors({ origin: ['http://localhost:3000', 'http://localhost:9000'] }))
 
 app.get('/', ...healthcheckHandlers)
 app.get('/healthz', ...healthcheckHandlers)
@@ -28,5 +30,8 @@ app.get('/todos/:id', ...getTodoHandlers)
 app.put('/todos/:id', ...updateTodoHandlers)
 app.delete('/todos/:id', ...deleteTodoHandlers)
 app.put('/todos/:id/complete', ...completeTodoHandlers)
+
+app.notFound(notFoundHandler)
+app.onError(errorHandler)
 
 export { app }

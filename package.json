@@ -15,9 +15,9 @@
     "lint": "pnpm --recursive run lint",
     "format": "pnpm --recursive run format",
     "generate": "pnpm --recursive run /^generate:.*/",
+    "update": "pnpm update --recursive --latest --interactive",
     "openapi:spec": "serve apps/spec -p 9000",
-    "openapi:mock": "prism mock apps/spec/openapi.yaml -p 8080",
-    "update": "pnpm update --recursive --latest --interactive"
+    "openapi:mock": "prism mock apps/spec/openapi.yaml -p 9001"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
