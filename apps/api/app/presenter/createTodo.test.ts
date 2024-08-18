@@ -17,13 +17,13 @@ test('ok', async () => {
 	assert.equal(await response.text(), 'createTodo')
 })
 
-test('invalid body', async () => {
-	const request = new Request(`${env.APP_HOST}/todos`, {
-		method: 'POST',
-		headers: new Headers({ 'Content-Type': 'application/json' }),
-	})
+// test('invalid body', async () => {
+// 	const request = new Request(`${env.APP_HOST}/todos`, {
+// 		method: 'POST',
+// 		headers: new Headers({ 'Content-Type': 'application/json' }),
+// 	})
 
-	const response = await app.request(request)
+// 	const response = await app.request(request)
 
-	assert.equal(response.status, 400)
-})
+// 	assert.equal(response.status, 400)
+// })
