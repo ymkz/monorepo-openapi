@@ -29,7 +29,7 @@ export const client = createClient(createConfig())
  * 条件に一致するTodoのリストを取得する
  */
 export const findTodos = <ThrowOnError extends boolean = false>(options?: Options<FindTodosData, ThrowOnError>) => {
-	return (options?.client ?? client).get<ThrowOnError, FindTodosResponse, FindTodosError>({
+	return (options?.client ?? client).get<FindTodosResponse, FindTodosError, ThrowOnError>({
 		...options,
 		url: '/todos',
 	})
@@ -40,7 +40,7 @@ export const findTodos = <ThrowOnError extends boolean = false>(options?: Option
  * Todoを作成する
  */
 export const createTodo = <ThrowOnError extends boolean = false>(options: Options<CreateTodoData, ThrowOnError>) => {
-	return (options?.client ?? client).post<ThrowOnError, CreateTodoResponse, CreateTodoError>({
+	return (options?.client ?? client).post<CreateTodoResponse, CreateTodoError, ThrowOnError>({
 		...options,
 		url: '/todos',
 	})
@@ -51,7 +51,7 @@ export const createTodo = <ThrowOnError extends boolean = false>(options: Option
  * 指定したidのTodoを更新する
  */
 export const updateTodo = <ThrowOnError extends boolean = false>(options: Options<UpdateTodoData, ThrowOnError>) => {
-	return (options?.client ?? client).put<ThrowOnError, UpdateTodoResponse, UpdateTodoError>({
+	return (options?.client ?? client).put<UpdateTodoResponse, UpdateTodoError, ThrowOnError>({
 		...options,
 		url: '/todos/{id}',
 	})
@@ -62,7 +62,7 @@ export const updateTodo = <ThrowOnError extends boolean = false>(options: Option
  * 指定したidのTodoを取得する
  */
 export const getTodo = <ThrowOnError extends boolean = false>(options: Options<GetTodoData, ThrowOnError>) => {
-	return (options?.client ?? client).get<ThrowOnError, GetTodoResponse, GetTodoError>({
+	return (options?.client ?? client).get<GetTodoResponse, GetTodoError, ThrowOnError>({
 		...options,
 		url: '/todos/{id}',
 	})
@@ -73,7 +73,7 @@ export const getTodo = <ThrowOnError extends boolean = false>(options: Options<G
  * 指定したidのTodoを削除する
  */
 export const deleteTodo = <ThrowOnError extends boolean = false>(options: Options<DeleteTodoData, ThrowOnError>) => {
-	return (options?.client ?? client).delete<ThrowOnError, DeleteTodoResponse, DeleteTodoError>({
+	return (options?.client ?? client).delete<DeleteTodoResponse, DeleteTodoError, ThrowOnError>({
 		...options,
 		url: '/todos/{id}',
 	})
@@ -86,7 +86,7 @@ export const deleteTodo = <ThrowOnError extends boolean = false>(options: Option
 export const completeTodo = <ThrowOnError extends boolean = false>(
 	options: Options<CompleteTodoData, ThrowOnError>,
 ) => {
-	return (options?.client ?? client).put<ThrowOnError, CompleteTodoResponse, CompleteTodoError>({
+	return (options?.client ?? client).put<CompleteTodoResponse, CompleteTodoError, ThrowOnError>({
 		...options,
 		url: '/todos/{id}/complete',
 	})
