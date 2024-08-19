@@ -14,27 +14,75 @@ importers:
       '@dotenvx/dotenvx':
         specifier: 1.7.0
         version: 1.7.0
+      '@hey-api/openapi-ts':
+        specifier: 0.52.8
+        version: 0.52.8(typescript@5.5.4)
+      '@kubb/cli':
+        specifier: 2.25.1
+        version: 2.25.1(typescript@5.5.4)
+      '@kubb/core':
+        specifier: 2.25.1
+        version: 2.25.1
+      '@kubb/plugin-oas':
+        specifier: 2.25.1
+        version: 2.25.1(@kubb/react@2.25.1)
+      '@kubb/swagger':
+        specifier: 2.25.1
+        version: 2.25.1(@kubb/react@2.25.1)
+      '@kubb/swagger-ts':
+        specifier: 2.25.1
+        version: 2.25.1(@kubb/react@2.25.1)
+      '@kubb/swagger-zod':
+        specifier: 2.25.1
+        version: 2.25.1(@kubb/react@2.25.1)
+      '@remix-run/dev':
+        specifier: 2.11.2
+        version: 2.11.2(@remix-run/react@2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(@remix-run/serve@2.11.2(typescript@5.5.4))(@types/node@22.4.0)(typescript@5.5.4)(vite@5.4.1(@types/node@22.4.0))
       '@stoplight/prism-cli':
         specifier: 5.9.0
         version: 5.9.0
       '@types/node':
         specifier: 22.4.0
         version: 22.4.0
+      '@types/react':
+        specifier: 18.3.3
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: 18.3.0
+        version: 18.3.0
+      autoprefixer:
+        specifier: 10.4.20
+        version: 10.4.20(postcss@8.4.41)
       knip:
         specifier: 5.27.2
         version: 5.27.2(@types/node@22.4.0)(typescript@5.5.4)
+      pkgroll:
+        specifier: 2.4.2
+        version: 2.4.2(typescript@5.5.4)
       poku:
         specifier: 2.4.4
         version: 2.4.4
+      postcss:
+        specifier: 8.4.41
+        version: 8.4.41
       serve:
         specifier: 14.2.3
         version: 14.2.3
+      tailwindcss:
+        specifier: 3.4.10
+        version: 3.4.10
       tinyspy:
         specifier: 3.0.0
         version: 3.0.0
+      tsx:
+        specifier: 4.17.0
+        version: 4.17.0
       typescript:
         specifier: 5.5.4
         version: 5.5.4
+      vite:
+        specifier: 5.4.1
+        version: 5.4.1(@types/node@22.4.0)
 
   apps/api:
     dependencies:
@@ -62,31 +110,6 @@ importers:
       zod:
         specifier: 3.23.8
         version: 3.23.8
-    devDependencies:
-      '@kubb/cli':
-        specifier: 2.25.1
-        version: 2.25.1(typescript@5.5.4)
-      '@kubb/core':
-        specifier: 2.25.1
-        version: 2.25.1
-      '@kubb/plugin-oas':
-        specifier: 2.25.1
-        version: 2.25.1(@kubb/react@2.25.1)
-      '@kubb/swagger':
-        specifier: 2.25.1
-        version: 2.25.1(@kubb/react@2.25.1)
-      '@kubb/swagger-ts':
-        specifier: 2.25.1
-        version: 2.25.1(@kubb/react@2.25.1)
-      '@kubb/swagger-zod':
-        specifier: 2.25.1
-        version: 2.25.1(@kubb/react@2.25.1)
-      pkgroll:
-        specifier: 2.4.2
-        version: 2.4.2(typescript@5.5.4)
-      tsx:
-        specifier: 4.17.0
-        version: 4.17.0
 
   apps/web:
     dependencies:
@@ -123,31 +146,6 @@ importers:
       zod:
         specifier: 3.23.8
         version: 3.23.8
-    devDependencies:
-      '@hey-api/openapi-ts':
-        specifier: 0.52.8
-        version: 0.52.8(typescript@5.5.4)
-      '@remix-run/dev':
-        specifier: 2.11.2
-        version: 2.11.2(@remix-run/react@2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(@remix-run/serve@2.11.2(typescript@5.5.4))(@types/node@22.4.0)(typescript@5.5.4)(vite@5.4.1(@types/node@22.4.0))
-      '@types/react':
-        specifier: 18.3.3
-        version: 18.3.3
-      '@types/react-dom':
-        specifier: 18.3.0
-        version: 18.3.0
-      autoprefixer:
-        specifier: 10.4.20
-        version: 10.4.20(postcss@8.4.41)
-      postcss:
-        specifier: 8.4.41
-        version: 8.4.41
-      tailwindcss:
-        specifier: 3.4.10
-        version: 3.4.10
-      vite:
-        specifier: 5.4.1
-        version: 5.4.1(@types/node@22.4.0)
 
 packages:
 
