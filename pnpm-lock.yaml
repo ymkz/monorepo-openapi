@@ -87,17 +87,17 @@ importers:
   apps/api:
     dependencies:
       '@hono/node-server':
-        specifier: 1.12.1
-        version: 1.12.1
+        specifier: 1.12.2
+        version: 1.12.2(hono@4.5.9)
       '@hono/zod-validator':
         specifier: 0.2.2
-        version: 0.2.2(hono@4.5.8)(zod@3.23.8)
+        version: 0.2.2(hono@4.5.9)(zod@3.23.8)
       '@t3-oss/env-core':
-        specifier: 0.11.0
-        version: 0.11.0(typescript@5.5.4)(zod@3.23.8)
+        specifier: 0.11.1
+        version: 0.11.1(typescript@5.5.4)(zod@3.23.8)
       hono:
-        specifier: 4.5.8
-        version: 4.5.8
+        specifier: 4.5.9
+        version: 4.5.9
       pino:
         specifier: 9.3.2
         version: 9.3.2
@@ -126,8 +126,8 @@ importers:
         specifier: 2.11.2
         version: 2.11.2(typescript@5.5.4)
       '@t3-oss/env-core':
-        specifier: 0.11.0
-        version: 0.11.0(typescript@5.5.4)(zod@3.23.8)
+        specifier: 0.11.1
+        version: 0.11.1(typescript@5.5.4)(zod@3.23.8)
       isbot:
         specifier: 5.1.17
         version: 5.1.17
@@ -801,9 +801,11 @@ packages:
     peerDependencies:
       typescript: ^5.x
 
-  '@hono/node-server@1.12.1':
-    resolution: {integrity: sha512-C9l+08O8xtXB7Ppmy8DjBFH1hYji7JKzsU32Yt1poIIbdPp6S7aOI8IldDHD9YFJ55lv2c21ovNrmxatlHfhAg==}
+  '@hono/node-server@1.12.2':
+    resolution: {integrity: sha512-xjzhqhSWUE/OhN0g3KCNVzNsQMlFUAL+/8GgPUr3TKcU7cvgZVBGswFofJ8WwGEHTqobzze1lDpGJl9ZNckDhA==}
     engines: {node: '>=18.14.1'}
+    peerDependencies:
+      hono: ^4
 
   '@hono/zod-validator@0.2.2':
     resolution: {integrity: sha512-dSDxaPV70Py8wuIU2QNpoVEIOSzSXZ/6/B/h4xA7eOMz7+AarKTSGV8E6QwrdcCbBLkpqfJ4Q2TmBO0eP1tCBQ==}
@@ -1305,8 +1307,8 @@ packages:
     resolution: {integrity: sha512-JZlVFE6/dYpP9tQmV0/ADfn32L9uFarHWxfcRhReKUnljz1ZiUM5zpX+PH8h5CJs6lao3TuFqnPm9IJJCEkE2w==}
     engines: {node: '>=10.8'}
 
-  '@t3-oss/env-core@0.11.0':
-    resolution: {integrity: sha512-PSalC5bG0a7XbyoLydiQdAnx3gICX6IQNctvh+TyLrdFxsxgocdj9Ui7sd061UlBzi+z4aIGjnem1kZx9QtUgQ==}
+  '@t3-oss/env-core@0.11.1':
+    resolution: {integrity: sha512-MaxOwEoG1ntCFoKJsS7nqwgcxLW1SJw238AJwfJeaz3P/8GtkxXZsPPolsz1AdYvUTbe3XvqZ/VCdfjt+3zmKw==}
     peerDependencies:
       typescript: '>=5.0.0'
       zod: ^3.0.0
@@ -2419,8 +2421,8 @@ packages:
   hast-util-whitespace@2.0.1:
     resolution: {integrity: sha512-nAxA0v8+vXSBDt3AnRUNjyRIQ0rD+ntpbAp4LnPkumc5M9yUbSMa4XDU9Q6etY4f1Wp4bNgvc1yjiZtsTTrSng==}
 
-  hono@4.5.8:
-    resolution: {integrity: sha512-pqpSlcdqGkpTTRpLYU1PnCz52gVr0zVR9H5GzMyJWuKQLLEBQxh96q45QizJ2PPX8NATtz2mu31/PKW/Jt+90Q==}
+  hono@4.5.9:
+    resolution: {integrity: sha512-zz8ktqMDRrZETjxBrv8C5PQRFbrTRCLNVAjD1SNQyOzv4VjmX68Uxw83xQ6oxdAB60HiWnGEatiKA8V3SZLDkQ==}
     engines: {node: '>=16.0.0'}
 
   hosted-git-info@6.1.1:
@@ -5135,11 +5137,13 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@hono/node-server@1.12.1': {}
-
-  '@hono/zod-validator@0.2.2(hono@4.5.8)(zod@3.23.8)':
+  '@hono/node-server@1.12.2(hono@4.5.9)':
     dependencies:
-      hono: 4.5.8
+      hono: 4.5.9
+
+  '@hono/zod-validator@0.2.2(hono@4.5.9)(zod@3.23.8)':
+    dependencies:
+      hono: 4.5.9
       zod: 3.23.8
 
   '@humanwhocodes/momoa@2.0.4': {}
@@ -5907,7 +5911,7 @@ snapshots:
       '@stoplight/yaml-ast-parser': 0.0.50
       tslib: 2.6.3
 
-  '@t3-oss/env-core@0.11.0(typescript@5.5.4)(zod@3.23.8)':
+  '@t3-oss/env-core@0.11.1(typescript@5.5.4)(zod@3.23.8)':
     dependencies:
       zod: 3.23.8
     optionalDependencies:
@@ -7172,7 +7176,7 @@ snapshots:
 
   hast-util-whitespace@2.0.1: {}
 
-  hono@4.5.8: {}
+  hono@4.5.9: {}
 
   hosted-git-info@6.1.1:
     dependencies:
