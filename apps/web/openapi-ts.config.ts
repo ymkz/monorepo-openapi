@@ -6,7 +6,7 @@ export default defineConfig({
 	input: resolve(process.cwd(), '../spec/openapi.yaml'),
 	schemas: false,
 	output: {
-		path: 'app/generated',
+		path: 'app/generated/openapi',
 		format: 'biome',
 	},
 })

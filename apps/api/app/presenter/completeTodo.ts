@@ -1,6 +1,6 @@
 import { zValidator } from '@hono/zod-validator'
 import { factory } from '../factory'
-import { completeTodoPathParamsSchema } from '../generated'
+import { completeTodoPathParamsSchema } from '../generated/openapi'
 import { logger } from '../helper/logger'
 
 export const completeTodoHandlers = factory.createHandlers(zValidator('param', completeTodoPathParamsSchema), (ctx) => {

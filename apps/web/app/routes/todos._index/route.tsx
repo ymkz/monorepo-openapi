@@ -1,7 +1,7 @@
 import type { LoaderFunctionArgs, MetaFunction } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
 import { todosApiClient } from '../../features/todos/client'
-import { findTodos } from '../../generated'
+import { findTodos } from '../../generated/openapi'
 
 export const meta: MetaFunction = () => {
 	return [{ title: 'Todos - アプリケーション名' }]

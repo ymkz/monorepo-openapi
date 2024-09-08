@@ -9,7 +9,7 @@ sql:
     queries: dml
     engine: postgresql
     codegen:
-      - out: app/gateway/datasource
+      - out: app/generated/sqlc
         plugin: ts
         options:
           runtime: node

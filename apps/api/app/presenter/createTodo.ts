@@ -1,6 +1,6 @@
 import { zValidator } from '@hono/zod-validator'
 import { factory } from '../factory'
-import { createTodoMutationRequestSchema } from '../generated'
+import { createTodoMutationRequestSchema } from '../generated/openapi'
 import { logger } from '../helper/logger'
 
 export const createTodoHandlers = factory.createHandlers(zValidator('json', createTodoMutationRequestSchema), (ctx) => {

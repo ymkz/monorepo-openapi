@@ -1,6 +1,6 @@
 import { zValidator } from '@hono/zod-validator'
 import { factory } from '../factory'
-import { findTodosQueryParamsSchema } from '../generated'
+import { findTodosQueryParamsSchema } from '../generated/openapi'
 
 export const findTodosHandlers = factory.createHandlers(zValidator('query', findTodosQueryParamsSchema), (ctx) => {
 	const query = ctx.req.valid('query')

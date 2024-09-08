@@ -1,4 +1,4 @@
-import type { Sql } from 'postgres'
+import { Sql } from 'postgres'
 
 export const findTodosQuery = `-- name: FindTodos :many
 SELECT id, title, completed_at, created_at, updated_at, deleted_at

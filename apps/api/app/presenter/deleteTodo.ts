@@ -1,6 +1,6 @@
 import { zValidator } from '@hono/zod-validator'
 import { factory } from '../factory'
-import { deleteTodoPathParamsSchema } from '../generated'
+import { deleteTodoPathParamsSchema } from '../generated/openapi'
 import { logger } from '../helper/logger'
 
 export const deleteTodoHandlers = factory.createHandlers(zValidator('param', deleteTodoPathParamsSchema), (ctx) => {

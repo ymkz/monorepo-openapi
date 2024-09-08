@@ -1,0 +1,28 @@
+type: object
+description: |-
+  Problem Details (RFC9457)
+required:
+  - title
+  - type
+  - detail
+  - status
+properties:
+  title:
+    type: string
+    description: 主要なエラーの要因
+    example: DB Connection Timeout
+  type:
+    type: string
+    description: エラーコード
+    example: E_001
+  detail:
+    type: string
+    description: エラーの詳細に関するメッセージ
+    example: failed to establish connection
+  status:
+    type: integer
+    format: int32
+    minimum: 400
+    maximum: 600
+    description: HTTPステータスコード
+    example: 500
