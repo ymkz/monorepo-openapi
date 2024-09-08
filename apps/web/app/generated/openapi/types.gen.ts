@@ -102,7 +102,7 @@ export type GetTodoError = ProblemDetails
 
 export type DeleteTodoData = {
 	path: {
-		id: Todo
+		id: TodoId
 	}
 }
 
