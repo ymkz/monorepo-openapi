@@ -1,9 +1,10 @@
 import { zValidator } from '@hono/zod-validator'
 import { factory } from '../factory'
-import { findTodosQueryParamsSchema } from '../generated/openapi'
+import { findTodosQueryParams } from '../generated/openapi'
+import { logger } from '../helper/logger'
 
-export const findTodosHandlers = factory.createHandlers(zValidator('query', findTodosQueryParamsSchema), (ctx) => {
+export const findTodosHandlers = factory.createHandlers(zValidator('query', findTodosQueryParams), (ctx) => {
 	const query = ctx.req.valid('query')
-	// const result = findTodosUsecase(query)
+	logger.info({ query })
 	return ctx.text('findTodos', 200)
 })

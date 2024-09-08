@@ -34,24 +34,290 @@ tags:
 paths:
   /todos:
     get:
-      $ref: ./operations/findTodos.yaml
+      operationId: findTodos
+      summary: findTodos
+      description: |-
+        条件に一致するTodoのリストを取得する
+      tags:
+        - Todo
+      parameters:
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            format: int32
+      responses:
+        "200":
+          description: 正常時の応答
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Todo"
+        "400":
+          description: リクエストが不正だった場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+        "500":
+          description: エラーが発生した場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
     post:
-      $ref: ./operations/createTodo.yaml
+      operationId: createTodo
+      summary: createTodo
+      description: |-
+        Todoを作成する
+      tags:
+        - Todo
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - title
+              properties:
+                title:
+                  type: string
+                  description: タイトル
+                  example: TODOタイトル
+      responses:
+        "200":
+          description: 正常時の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Todo"
+        "400":
+          description: リクエストが不正だった場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+        "500":
+          description: エラーが発生した場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
   /todos/{id}:
     put:
-      $ref: ./operations/updateTodo.yaml
+      operationId: updateTodo
+      summary: updateTodo
+      description: |-
+        指定したidのTodoを更新する
+      tags:
+        - Todo
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            $ref: "#/components/schemas/TodoId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - title
+              properties:
+                title:
+                  type: string
+                  description: タイトル
+                  example: TODOタイトル
+      responses:
+        "200":
+          description: 正常時の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Todo"
+        "400":
+          description: リクエストが不正だった場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+        "404":
+          description: リクエストがされたidが存在しない場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+        "500":
+          description: エラーが発生した場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
     get:
-      $ref: ./operations/getTodo.yaml
+      operationId: getTodo
+      summary: getTodo
+      description: |-
+        指定したidのTodoを取得する
+      tags:
+        - Todo
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            $ref: "#/components/schemas/TodoId"
+      responses:
+        "200":
+          description: 正常時の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Todo"
+        "404":
+          description: リクエストがされたidが存在しない場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+        "500":
+          description: エラーが発生した場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
     delete:
-      $ref: ./operations/deleteTodo.yaml
+      operationId: deleteTodo
+      summary: deleteTodo
+      description: |-
+        指定したidのTodoを削除する
+      tags:
+        - Todo
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            $ref: "#/components/schemas/TodoId"
+      responses:
+        "200":
+          description: 正常時の応答
+        "404":
+          description: リクエストがされたidが存在しない場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+        "500":
+          description: エラーが発生した場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
   /todos/{id}/complete:
     put:
-      $ref: ./operations/completeTodo.yaml
+      operationId: completeTodo
+      summary: completeTodo
+      description: |-
+        指定したidのTodoを完了にする
+      tags:
+        - Todo
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            $ref: "#/components/schemas/TodoId"
+      responses:
+        "200":
+          description: 正常時の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Todo"
+        "404":
+          description: リクエストがされたidが存在しない場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
+        "500":
+          description: エラーが発生した場合の応答
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProblemDetails"
 components:
   schemas:
     ProblemDetails:
-      $ref: ./schemas/problemDetails.yaml
+      type: object
+      description: |-
+        Problem Details (RFC9457)
+      required:
+        - title
+        - type
+        - detail
+        - status
+      properties:
+        title:
+          type: string
+          description: 主要なエラーの要因
+          example: DB Connection Timeout
+        type:
+          type: string
+          description: エラーコード
+          example: E_001
+        detail:
+          type: string
+          description: エラーの詳細に関するメッセージ
+          example: failed to establish connection
+        status:
+          type: integer
+          format: int32
+          minimum: 400
+          maximum: 600
+          description: HTTPステータスコード
+          example: 500
     Todo:
-      $ref: ./schemas/todo.yaml
+      type: object
+      required:
+        - id
+        - title
+        - createdAt
+      properties:
+        id:
+          $ref: "#/components/schemas/TodoId"
+        title:
+          type: string
+          description: タイトル
+          example: TODOタイトル
+        completedAt:
+          type: string
+          format: date-time
+          description: 完了時刻（ISO8601）（最後に完了にした時刻が入る）
+          example: 2024-01-23T01:23:45+09:00
+        createdAt:
+          type: string
+          format: date-time
+          description: 作成時刻（ISO8601）
+          example: 2024-01-23T01:23:45+09:00
+        updatedAt:
+          type: string
+          format: date-time
+          description: 更新時刻（ISO8601）（更新されるたびに更新時刻が入る）
+          example: 2024-01-23T01:23:45+09:00
+        deletedAt:
+          type: string
+          format: date-time
+          description: 削除時刻（ISO8601）（論理削除されたら削除時刻が入る）
+          example: 2024-01-23T01:23:45+09:00
     TodoId:
-      $ref: ./schemas/todoId.yaml
+      type: integer
+      format: int32
+      description: 連番で発番されるid
+      example: 1
