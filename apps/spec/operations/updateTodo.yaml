@@ -1,0 +1,50 @@
+operationId: updateTodo
+summary: updateTodo
+description: |-
+  指定したidのTodoを更新する
+tags:
+  - Todo
+parameters:
+  - name: id
+    in: path
+    required: true
+    schema:
+      $ref: ../schemas/todoId.yaml
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        required:
+          - title
+        properties:
+          title:
+            type: string
+            description: タイトル
+            example: TODOタイトル
+responses:
+  "200":
+    description: 正常時の応答
+    content:
+      application/json:
+        schema:
+          $ref: ../schemas/todo.yaml
+  "400":
+    description: リクエストが不正だった場合の応答
+    content:
+      application/json:
+        schema:
+          $ref: ../schemas/problemDetails.yaml
+  "404":
+    description: リクエストがされたidが存在しない場合の応答
+    content:
+      application/json:
+        schema:
+          $ref: ../schemas/problemDetails.yaml
+  "500":
+    description: エラーが発生した場合の応答
+    content:
+      application/json:
+        schema:
+          $ref: ../schemas/problemDetails.yaml

@@ -1,0 +1,4 @@
+type: integer
+format: int32
+description: 連番で発番されるid
+example: 1

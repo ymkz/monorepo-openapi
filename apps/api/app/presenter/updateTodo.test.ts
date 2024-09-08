@@ -29,13 +29,14 @@ test('invalid path param', async () => {
 	assert.equal(response.status, 400)
 })
 
-// test('invalid body', async () => {
-// 	const request = new Request(`${env.APP_HOST}/todos/1`, {
-// 		method: 'PUT',
-// 		headers: new Headers({ 'Content-Type': 'application/json' }),
-// 	})
+test('invalid body', async () => {
+	const request = new Request(`${env.APP_HOST}/todos/1`, {
+		method: 'PUT',
+		body: JSON.stringify({}),
+		headers: new Headers({ 'Content-Type': 'application/json' }),
+	})
 
-// 	const response = await app.request(request)
+	const response = await app.request(request)
 
-// 	assert.equal(response.status, 400)
-// })
+	assert.equal(response.status, 400)
+})

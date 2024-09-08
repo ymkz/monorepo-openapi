@@ -1,9 +1,10 @@
 import { zValidator } from '@hono/zod-validator'
 import { factory } from '../factory'
-import { getTodoPathParamsSchema } from '../generated'
+import { getTodoParams } from '../generated/openapi'
 import { logger } from '../helper/logger'
+import { applyCoerceNumber } from '../helper/zod'
 
-export const getTodoHandlers = factory.createHandlers(zValidator('param', getTodoPathParamsSchema), (ctx) => {
+export const getTodoHandlers = factory.createHandlers(zValidator('param', applyCoerceNumber(getTodoParams)), (ctx) => {
 	const param = ctx.req.valid('param')
 	logger.info({ param })
 	return ctx.text('getTodo', 200)

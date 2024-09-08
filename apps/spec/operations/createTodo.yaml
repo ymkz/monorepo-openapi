@@ -1,0 +1,38 @@
+operationId: createTodo
+summary: createTodo
+description: |-
+  Todoを作成する
+tags:
+  - Todo
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        required:
+          - title
+        properties:
+          title:
+            type: string
+            description: タイトル
+            example: TODOタイトル
+responses:
+  "200":
+    description: 正常時の応答
+    content:
+      application/json:
+        schema:
+          $ref: ../schemas/todo.yaml
+  "400":
+    description: リクエストが不正だった場合の応答
+    content:
+      application/json:
+        schema:
+          $ref: ../schemas/problemDetails.yaml
+  "500":
+    description: エラーが発生した場合の応答
+    content:
+      application/json:
+        schema:
+          $ref: ../schemas/problemDetails.yaml

@@ -14,8 +14,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "biome check",
     "format": "biome check --write",
-    "generate:kubb": "kubb generate",
-    "generate:sqlc": "sqlc generate && biome check --write app/gateway/datasource"
+    "generate:openapi": "orval generate",
+    "generate:sqlc": "sqlc generate && biome check --write app/generated/sqlc"
   },
   "dependencies": {
     "@hono/node-server": "1.12.2",
