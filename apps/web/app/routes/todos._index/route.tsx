@@ -11,7 +11,7 @@ export const loader = async (args: LoaderFunctionArgs) => {
 	const result = await findTodos({ client: todosApiClient })
 	// TODO: エラー処理
 
-	return { todos: result.data }
+	return { findTodosResult: result.data }
 }
 
 export default function Route() {
@@ -21,7 +21,7 @@ export default function Route() {
 		<div className="container mx-auto">
 			<h1>Todos</h1>
 			<div>
-				{loaderData.todos?.map((todo) => (
+				{loaderData.findTodosResult?.todos.map((todo) => (
 					<div key={todo.id}>{JSON.stringify(todo)}</div>
 				))}
 			</div>

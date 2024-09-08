@@ -47,15 +47,29 @@ paths:
           schema:
             type: integer
             format: int32
+        - name: offset
+          in: query
+          required: false
+          schema:
+            type: integer
+            format: int32
       responses:
         "200":
           description: 正常時の応答
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Todo"
+                type: object
+                required:
+                  - pagination
+                  - todos
+                properties:
+                  pagination:
+                    $ref: "#/components/schemas/Pagination"
+                  todos:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Todo"
         "400":
           description: リクエストが不正だった場合の応答
           content:
@@ -283,8 +297,40 @@ components:
           maximum: 600
           description: HTTPステータスコード
           example: 500
+    Pagination:
+      type: object
+      description: |-
+        ページネーションモデル
+      required:
+        - totalCounts
+        - totalPages
+        - currentPage
+        - countPerPage
+      properties:
+        totalCounts:
+          type: integer
+          format: int32
+          description: 対象の全件数
+          example: 1234
+        totalPages:
+          type: integer
+          format: int32
+          description: 対象の全ページ数
+          example: 124
+        currentPage:
+          type: integer
+          format: int32
+          description: 現在のページ番号
+          example: 1
+        countPerPage:
+          type: integer
+          format: int32
+          description: 1ページにおける件数
+          example: 10
     Todo:
       type: object
+      description: |-
+        Todoモデル
       required:
         - id
         - title
@@ -319,5 +365,6 @@ components:
     TodoId:
       type: integer
       format: int32
-      description: 連番で発番されるid
+      description: |-
+        連番で発番されるid
       example: 1

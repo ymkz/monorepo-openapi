@@ -29,17 +29,27 @@ import { z as zod } from 'zod'
  */
 export const findTodosQueryParams = zod.object({
 	limit: zod.number().optional(),
+	offset: zod.number().optional(),
 })
 
-export const findTodosResponseItem = zod.object({
-	id: zod.number(),
-	title: zod.string(),
-	completedAt: zod.string().datetime().optional(),
-	createdAt: zod.string().datetime(),
-	updatedAt: zod.string().datetime().optional(),
-	deletedAt: zod.string().datetime().optional(),
+export const findTodosResponse = zod.object({
+	pagination: zod.object({
+		totalCounts: zod.number(),
+		totalPages: zod.number(),
+		currentPage: zod.number(),
+		countPerPage: zod.number(),
+	}),
+	todos: zod.array(
+		zod.object({
+			id: zod.number(),
+			title: zod.string(),
+			completedAt: zod.string().datetime().optional(),
+			createdAt: zod.string().datetime(),
+			updatedAt: zod.string().datetime().optional(),
+			deletedAt: zod.string().datetime().optional(),
+		}),
+	),
 })
-export const findTodosResponse = zod.array(findTodosResponseItem)
 
 /**
  * Todoを作成する

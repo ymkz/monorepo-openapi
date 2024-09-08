@@ -22,6 +22,31 @@ export type ProblemDetails = {
 	status: number
 }
 
+/**
+ * ページネーションモデル
+ */
+export type Pagination = {
+	/**
+	 * 対象の全件数
+	 */
+	totalCounts: number
+	/**
+	 * 対象の全ページ数
+	 */
+	totalPages: number
+	/**
+	 * 現在のページ番号
+	 */
+	currentPage: number
+	/**
+	 * 1ページにおける件数
+	 */
+	countPerPage: number
+}
+
+/**
+ * Todoモデル
+ */
 export type Todo = {
 	id: TodoId
 	/**
@@ -54,10 +79,14 @@ export type TodoId = number
 export type FindTodosData = {
 	query?: {
 		limit?: number
+		offset?: number
 	}
 }
 
-export type FindTodosResponse = Array<Todo>
+export type FindTodosResponse = {
+	pagination: Pagination
+	todos: Array<Todo>
+}
 
 export type FindTodosError = ProblemDetails
 
