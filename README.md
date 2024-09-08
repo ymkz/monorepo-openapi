@@ -13,16 +13,12 @@ OpenAPIでbackendとfrontendをいい感じに管理するお試し実装のリ�
 
 ### init
 
-initilize for local development with .env file
-
 ```sh
 cp apps/api/.env.example apps/api/.env.local
 cp apps/web/.env.example apps/web/.env.local
 ```
 
 ### clean
-
-remove generated files/directories for refresh
 
 ```sh
 find . -name 'build' -type d -prune -exec rm -rf '{}' +
@@ -34,23 +30,17 @@ find . -name 'tsconfig.tsbuildinfo' -type f -prune -exec rm -rf '{}' +
 
 ### up
 
-up docker compose process
-
 ```sh
 docker compose up -d --wait --wait-timeout=60
 ```
 
 ### down
 
-down docker compose process
-
 ```sh
 docker compose down
 ```
 
 ### exec-postgres
-
-connect to postgres database on docker compose
 
 ```sh
 docker compose exec postgres psql -U local_user -d local_db
