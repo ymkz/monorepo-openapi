@@ -1,7 +1,7 @@
 services:
   postgres:
     container_name: postgres
-    image: postgres:17beta3
+    image: postgres:17rc1
     restart: always
     ports:
       - 5432:5432
