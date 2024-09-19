@@ -1,8 +1,8 @@
 import { zValidator } from '@hono/zod-validator'
-import { factory } from '../factory'
-import { updateTodoBody, updateTodoParams } from '../generated/openapi'
-import { logger } from '../helper/logger'
-import { applyCoerceNumber } from '../helper/zod'
+import { factory } from '../../factory'
+import { updateTodoBody, updateTodoParams } from '../../generated/openapi'
+import { logger } from '../../helper/logger'
+import { applyCoerceNumber } from '../../helper/zod'
 
 export const updateTodoHandlers = factory.createHandlers(
 	zValidator('param', applyCoerceNumber(updateTodoParams)),

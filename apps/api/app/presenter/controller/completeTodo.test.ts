@@ -1,6 +1,6 @@
 import { strict as assert, describe, test } from 'poku'
-import { env } from '../helper/env'
-import { app } from '../register'
+import { env } from '../../helper/env'
+import { app } from '../../register'
 
 describe('completeTodoHandlers')
 
