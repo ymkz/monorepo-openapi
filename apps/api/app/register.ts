@@ -9,10 +9,10 @@ import { createTodoHandlers } from './presenter/controller/createTodo'
 import { deleteTodoHandlers } from './presenter/controller/deleteTodo'
 import { findTodosHandlers } from './presenter/controller/findTodos'
 import { getTodoHandlers } from './presenter/controller/getTodo'
-import { errorHandler } from './presenter/handler/error'
-import { notFoundHandler } from './presenter/handler/notFound'
 import { healthcheckHandlers } from './presenter/controller/healthcheck'
 import { updateTodoHandlers } from './presenter/controller/updateTodo'
+import { errorHandler } from './presenter/handler/error'
+import { notFoundHandler } from './presenter/handler/notFound'
 
 const app = factory.createApp()
 
