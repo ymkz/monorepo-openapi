@@ -1,26 +1,28 @@
-import { strict as assert, describe, test } from 'poku'
+import { describe, expect, test } from 'vitest'
 import { env } from '../../helper/env'
 import { app } from '../../register'
 
-describe('deleteTodoHandlers')
+describe('ok', () => {
+	test('default', async () => {
+		const request = new Request(`${env.APP_HOST}/todos/1`, {
+			method: 'DELETE',
+		})
 
-test('ok', async () => {
-	const request = new Request(`${env.APP_HOST}/todos/1`, {
-		method: 'DELETE',
+		const response = await app.request(request)
+
+		expect(response.status).toBe(200)
+		expect(await response.text()).toBe('deleteTodo')
 	})
-
-	const response = await app.request(request)
-
-	assert.equal(response.status, 200)
-	assert.equal(await response.text(), 'deleteTodo')
 })
 
-test('invalid path param', async () => {
-	const request = new Request(`${env.APP_HOST}/todos/hello`, {
-		method: 'DELETE',
+describe('ng', () => {
+	test('invalid path param', async () => {
+		const request = new Request(`${env.APP_HOST}/todos/hello`, {
+			method: 'DELETE',
+		})
+
+		const response = await app.request(request)
+
+		expect(response.status).toBe(400)
 	})
-
-	const response = await app.request(request)
-
-	assert.equal(response.status, 400)
 })
