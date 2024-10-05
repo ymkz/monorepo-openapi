@@ -10,7 +10,7 @@
     "dev": "dotenvx run -f .env.local -- tsx watch --clear-screen=false app/server.ts",
     "build": "pkgroll --src=app --dist=build",
     "start": "node build/server.mjs",
-    "test": "dotenvx run -f .env.test -- poku",
+    "test": "dotenvx run -f .env.test -- vitest run",
     "typecheck": "tsc --noEmit",
     "lint": "biome check",
     "format": "biome check --write",
