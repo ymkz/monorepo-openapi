@@ -69,23 +69,23 @@ importers:
   apps/api:
     dependencies:
       '@hono/node-server':
-        specifier: 1.13.2
-        version: 1.13.2(hono@4.6.6)
+        specifier: 1.13.4
+        version: 1.13.4(hono@4.6.8)
       '@hono/zod-validator':
         specifier: 0.4.1
-        version: 0.4.1(hono@4.6.6)(zod@3.23.8)
+        version: 0.4.1(hono@4.6.8)(zod@3.23.8)
       '@t3-oss/env-core':
         specifier: 0.11.1
         version: 0.11.1(typescript@5.6.3)(zod@3.23.8)
       hono:
-        specifier: 4.6.6
-        version: 4.6.6
+        specifier: 4.6.8
+        version: 4.6.8
       pino:
         specifier: 9.5.0
         version: 9.5.0
       postgres:
-        specifier: 3.4.4
-        version: 3.4.4
+        specifier: 3.4.5
+        version: 3.4.5
       temporal-polyfill:
         specifier: 0.2.5
         version: 0.2.5
@@ -949,8 +949,8 @@ packages:
     peerDependencies:
       typescript: ^5.x
 
-  '@hono/node-server@1.13.2':
-    resolution: {integrity: sha512-0w8nEmAyx0Ul0CQp8BL2VtAG4YVdpzXd/mvvM+l0G5Oq22pUyHS+KeFFPSY+czLOF5NAiV3MUNPD1n14Ol5svg==}
+  '@hono/node-server@1.13.4':
+    resolution: {integrity: sha512-3tW9lC0+2mRmoGUEnq0d8Pi3SToWjg8flM9Z+h5Aamy23jjpiFr7n3/HLqXve6EudOsgN2tG2hZusqzNYVRmRw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
@@ -2550,8 +2550,8 @@ packages:
   hast-util-whitespace@2.0.1:
     resolution: {integrity: sha512-nAxA0v8+vXSBDt3AnRUNjyRIQ0rD+ntpbAp4LnPkumc5M9yUbSMa4XDU9Q6etY4f1Wp4bNgvc1yjiZtsTTrSng==}
 
-  hono@4.6.6:
-    resolution: {integrity: sha512-euUj5qwvtkG+p38GFs0LYacwaoS2hYRAGn9ysAggiwT2QBcPnT1XYUCW3hatW4C1KzAXTYuQ08BlVDJtAGuhlg==}
+  hono@4.6.8:
+    resolution: {integrity: sha512-f+2Ec9JAzabT61pglDiLJcF/DjiSefZkjCn9bzm1cYLGkD5ExJ3Jnv93ax9h0bn7UPLHF81KktoyjdQfWI2n1Q==}
     engines: {node: '>=16.9.0'}
 
   hosted-git-info@6.1.1:
@@ -3723,8 +3723,8 @@ packages:
     resolution: {integrity: sha512-56rxCq7G/XfB4EkXq9Egn5GCqugWvDFjafDOThIdMBsI15iqPqR5r15TfSr1YPYeEI19YeaXMCbY6u88Y76GLQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postgres@3.4.4:
-    resolution: {integrity: sha512-IbyN+9KslkqcXa8AO9fxpk97PA4pzewvpi2B3Dwy9u4zpV32QicaEdgmF3eSQUzdRk7ttDHQejNgAEr4XoeH4A==}
+  postgres@3.4.5:
+    resolution: {integrity: sha512-cDWgoah1Gez9rN3H4165peY9qfpEo+SA61oQv65O3cRUE1pOEoJWwddwcqKE8XZYjbblOJlYDlLV4h67HrEVDg==}
     engines: {node: '>=12'}
 
   postman-collection@4.5.0:
@@ -5306,13 +5306,13 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@hono/node-server@1.13.2(hono@4.6.6)':
+  '@hono/node-server@1.13.4(hono@4.6.8)':
     dependencies:
-      hono: 4.6.6
+      hono: 4.6.8
 
-  '@hono/zod-validator@0.4.1(hono@4.6.6)(zod@3.23.8)':
+  '@hono/zod-validator@0.4.1(hono@4.6.8)(zod@3.23.8)':
     dependencies:
-      hono: 4.6.6
+      hono: 4.6.8
       zod: 3.23.8
 
   '@ibm-cloud/openapi-ruleset-utilities@1.4.0': {}
@@ -7478,7 +7478,7 @@ snapshots:
 
   hast-util-whitespace@2.0.1: {}
 
-  hono@4.6.6: {}
+  hono@4.6.8: {}
 
   hosted-git-info@6.1.1:
     dependencies:
@@ -8795,7 +8795,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postgres@3.4.4: {}
+  postgres@3.4.5: {}
 
   postman-collection@4.5.0:
     dependencies:
