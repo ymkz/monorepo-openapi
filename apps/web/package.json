@@ -18,10 +18,10 @@
     "generate:client": "openapi-ts"
   },
   "dependencies": {
-    "@hey-api/client-fetch": "0.4.2",
-    "@remix-run/node": "2.13.1",
-    "@remix-run/react": "2.13.1",
-    "@remix-run/serve": "2.13.1",
+    "@hey-api/client-fetch": "0.4.3",
+    "@remix-run/node": "2.14.0",
+    "@remix-run/react": "2.14.0",
+    "@remix-run/serve": "2.14.0",
     "@t3-oss/env-core": "0.11.1",
     "isbot": "5.1.17",
     "pino": "9.5.0",
