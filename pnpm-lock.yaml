@@ -70,16 +70,16 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: 1.13.7
-        version: 1.13.7(hono@4.6.10)
+        version: 1.13.7(hono@4.6.11)
       '@hono/zod-validator':
         specifier: 0.4.1
-        version: 0.4.1(hono@4.6.10)(zod@3.23.8)
+        version: 0.4.1(hono@4.6.11)(zod@3.23.8)
       '@t3-oss/env-core':
         specifier: 0.11.1
         version: 0.11.1(typescript@5.6.3)(zod@3.23.8)
       hono:
-        specifier: 4.6.10
-        version: 4.6.10
+        specifier: 4.6.11
+        version: 4.6.11
       pino:
         specifier: 9.5.0
         version: 9.5.0
@@ -96,8 +96,8 @@ importers:
   apps/web:
     dependencies:
       '@hey-api/client-fetch':
-        specifier: 0.4.3
-        version: 0.4.3
+        specifier: 0.4.4
+        version: 0.4.4
       '@remix-run/node':
         specifier: 2.14.0
         version: 2.14.0(typescript@5.6.3)
@@ -935,8 +935,8 @@ packages:
     resolution: {integrity: sha512-8YXBE2ZcU/pImVOHX7MWrSR/X5up7t6rPWZlk34RwZEcdr3ua6X+32pSd6XuOQRN+vbuvYNfA6iey8NbrjuMFQ==}
     engines: {node: '>=14.0.0', npm: '>=6.0.0'}
 
-  '@hey-api/client-fetch@0.4.3':
-    resolution: {integrity: sha512-Y0McgfJED/Iq6Tr8LgewFL+qrOpb87rUBUJkc6mLzxqTkqF52KcexYZPlKyjee0Qb/oUJOupFRpvUEWjH/339w==}
+  '@hey-api/client-fetch@0.4.4':
+    resolution: {integrity: sha512-ebh1JjUdMAqes/Rg8OvbjDqGWGNhgHgmPtHlkIOUtj3y2mUXqX2g9sVoI/rSKW/FdADPng/90k5AL7bwT8W2lA==}
 
   '@hey-api/openapi-ts@0.53.11':
     resolution: {integrity: sha512-PaO+o0jDhfHVS5SjtonP5CzP/NYoW8dVZUn8WthSgzpgPts8AiWYXplOyk5uEnM4ZxbkZbeTiREwaNLnJmXlTQ==}
@@ -2591,8 +2591,8 @@ packages:
   hast-util-whitespace@2.0.1:
     resolution: {integrity: sha512-nAxA0v8+vXSBDt3AnRUNjyRIQ0rD+ntpbAp4LnPkumc5M9yUbSMa4XDU9Q6etY4f1Wp4bNgvc1yjiZtsTTrSng==}
 
-  hono@4.6.10:
-    resolution: {integrity: sha512-IXXNfRAZEahFnWBhUUlqKEGF9upeE6hZoRZszvNkyAz/CYp+iVbxm3viMvStlagRJohjlBRGOQ7f4jfcV0XMGg==}
+  hono@4.6.11:
+    resolution: {integrity: sha512-f0LwJQFKdUUrCUAVowxSvNCjyzI7ZLt8XWYU/EApyeq5FfOvHFarBaE5rjU9HTNFk4RI0FkdB2edb3p/7xZjzQ==}
     engines: {node: '>=16.9.0'}
 
   hosted-git-info@6.1.1:
@@ -5341,7 +5341,7 @@ snapshots:
 
   '@faker-js/faker@6.3.1': {}
 
-  '@hey-api/client-fetch@0.4.3': {}
+  '@hey-api/client-fetch@0.4.4': {}
 
   '@hey-api/openapi-ts@0.53.11(typescript@5.6.3)':
     dependencies:
@@ -5353,13 +5353,13 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@hono/node-server@1.13.7(hono@4.6.10)':
+  '@hono/node-server@1.13.7(hono@4.6.11)':
     dependencies:
-      hono: 4.6.10
+      hono: 4.6.11
 
-  '@hono/zod-validator@0.4.1(hono@4.6.10)(zod@3.23.8)':
+  '@hono/zod-validator@0.4.1(hono@4.6.11)(zod@3.23.8)':
     dependencies:
-      hono: 4.6.10
+      hono: 4.6.11
       zod: 3.23.8
 
   '@ibm-cloud/openapi-ruleset-utilities@1.4.0': {}
@@ -7607,7 +7607,7 @@ snapshots:
 
   hast-util-whitespace@2.0.1: {}
 
-  hono@4.6.10: {}
+  hono@4.6.11: {}
 
   hosted-git-info@6.1.1:
     dependencies:
