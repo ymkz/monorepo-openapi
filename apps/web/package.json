@@ -18,7 +18,7 @@
     "generate:client": "openapi-ts"
   },
   "dependencies": {
-    "@hey-api/client-fetch": "0.4.3",
+    "@hey-api/client-fetch": "0.4.4",
     "@remix-run/node": "2.14.0",
     "@remix-run/react": "2.14.0",
     "@remix-run/serve": "2.14.0",
