@@ -5,7 +5,7 @@
   "private": true,
   "sideEffects": false,
   "engines": {
-    "node": "20.x"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "dotenvx run -f .env.local -- remix vite:dev --port 3000",
