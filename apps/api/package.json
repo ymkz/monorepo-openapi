@@ -19,13 +19,13 @@
   },
   "dependencies": {
     "@hono/node-server": "1.13.7",
-    "@hono/zod-validator": "0.4.1",
+    "@hono/zod-validator": "0.4.2",
     "@t3-oss/env-core": "0.11.1",
-    "hono": "4.6.11",
-    "pino": "9.5.0",
+    "hono": "4.6.16",
+    "pino": "9.6.0",
     "postgres": "3.4.5",
     "temporal-polyfill": "0.2.5",
-    "zod": "3.23.8"
+    "zod": "3.24.1"
   },
   "module": "build/server.mjs"
 }
